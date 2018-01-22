@@ -13,7 +13,7 @@ var app = express();
 
 //set up db
 mongoose.Promise = global.Promise
-mongoose.connect(process.env.MONGODB_URI, {useMongoClient: true})
+mongoose.connect(process.env.MONGODB_URI)
 
 const connection = mongoose.connection
 connection.on('connected', () => {
