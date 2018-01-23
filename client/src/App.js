@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 //import {BrowserRouter as Router, Route, Switch, Link} from 'react-router-dom'
 import styled from 'styled-components'
 import Home from './components/Home'
-//import UserPage from './components/UserPage'
+import UserPage from './components/UserPage'
 import axios from 'axios'
 
 class App extends Component {
@@ -34,6 +34,7 @@ render() {
   return (
       <div>
         <Home />
+        <UserPage />
       </div>
   
   )
