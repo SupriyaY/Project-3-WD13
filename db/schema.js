@@ -4,7 +4,7 @@ const Schema = mongoose.Schema
 mongoose.Promise = global.Promise
 
 const FurnishingSchema = new Schema({
-    furniture_rec: {
+    furniture_url: {
         type: String,
         required: [true, 'Furniture is required!']
     },
@@ -12,7 +12,7 @@ const FurnishingSchema = new Schema({
     furniture_img: {
         type: String
     },
-    rug_rec: {
+    rug_url: {
         type: String,
         required: [true, 'Rug is required!']
 
@@ -20,7 +20,7 @@ const FurnishingSchema = new Schema({
     rug_img: {
         type: String
     },
-    light_rec: {
+    light_url: {
         type: String,
         required: [true, 'Rug is required!']
     },
@@ -29,7 +29,7 @@ const FurnishingSchema = new Schema({
 
 const RoomSchema = new Schema({
 
-    room_type: {
+    room_name: {
         type: String,
         required: [true, 'Room type is required!']
 
@@ -43,17 +43,17 @@ const UserSchema = new Schema({
         type: String,
         required: true['Username is required!']
     },
-    first_name: {
-        type: String,
-        required: [true, 'Name is required!']
-    },
-    last_name: {
+        name: {
         type: String,
         required: [true, 'Name is required!']
     },
     email: {
         type: String
     },
+    photo_url: {
+    type: String
+},
+
     rooms: [RoomSchema]
 }, {
     timestamps: {},

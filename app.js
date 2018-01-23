@@ -47,6 +47,17 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 
+
+////Controllers
+const userController = require('./controllers/usersController')
+app.use('/api/users', userController)
+
+
+
+
+
+
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
