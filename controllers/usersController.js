@@ -3,10 +3,11 @@ const router = express.Router();
 const User = require('../db/models/User')
 
 
+
 router.get('/', (req, res) => {
     User.find({})
         .then(users => {
-            response.json(users)
+            res.json(users)
         })
         .catch((err) => console.log(err))
 })
