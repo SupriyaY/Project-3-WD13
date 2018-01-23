@@ -49,8 +49,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 ////Controllers
-const userController = require('./controllers/usersController')
-app.use('/api/users', userController)
+const usersController = require('./controllers/usersController')
+app.use('/api/users', usersController)
 
 
 
