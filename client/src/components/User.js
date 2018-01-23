@@ -1,22 +1,22 @@
-import React, { Component } from 'react';
-import User from './User'
+// import React, {Component} from 'react';
 
-class User extends Component {
+// class User extends Component {
 
-    render () {
+//     render() {
+//         <User 
+//         {this.props.name}
+//         {this.props.username}
+//         {this.props.email}
+//         {this.props.photo_url}      
+//         />
 
-        return (
-        <div>
-Hello User!
+//         return (
+            
 
-            </div>
-        
-        
-        
-        )
+//         )
 
-    }
+//     }
 
-}
+// }
 
-export default User;
+// export default User;

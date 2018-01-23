@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 //import {BrowserRouter as Router, Route, Switch, Link} from 'react-router-dom'
 import styled from 'styled-components'
-
+import Home from './components/Home'
 //import UserPage from './components/UserPage'
 import axios from 'axios'
 
@@ -16,8 +16,8 @@ class App extends Component {
   }
 
   async getAllUsers(){try {
-    const res = await axios.get('/api/users')
-    const users = res.data
+    const response = await axios.get('/api/users')
+    const users = response.data
     console.log(users)
     this.setState({users: users})
   }
@@ -29,18 +29,13 @@ catch(error) {
 
 
 render() {
+  
+  console.log("Users!", this.state.users)
   return (
-    // <Router>
       <div>
-        {/* <div>
-          <Link to='/'>HomePage</Link>
-        </div> */}
-        {/* <Switch>
-          <Route exact path="/" component={HomePage}/>
-          <Route path="/user/:userId" component={UserPage}/>
-        </Switch> */}
+        <Home />
       </div>
-    // </Router>
+  
   )
 }
 }

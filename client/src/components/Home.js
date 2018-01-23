@@ -1,15 +1,15 @@
 import React, {Component} from 'react'
 //import {Redirect} from 'react-router-dom'
-import UserList from './UserList'
+import UserPage from './UserPage'
 
-class UserPage extends Component {
+class Home extends Component {
 
     render() {
         return (
 
             <div>
 
-                Hello UserPage!
+                Hello from home!
             </div>
 
         )
@@ -17,4 +17,4 @@ class UserPage extends Component {
 
 }
 
-export default UserPage;
+export default Home;

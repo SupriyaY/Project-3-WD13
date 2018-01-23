@@ -1,5 +1,5 @@
-const express = require('express');
-const router = express.Router();
+const express = require('express')
+const router = express.Router()({mergeParams: true})
 const User = require('../db/models/User')
 
 // router.get('/new', (request, response) => {
