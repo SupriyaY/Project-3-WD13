@@ -10,7 +10,7 @@ class UserPage extends Component {
             <div>
 
                 Hello UserPage!
-                <UserList />
+                <UserList users={this.props.users}/>
             </div>
 
         )

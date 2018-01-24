@@ -34,7 +34,7 @@ render() {
   return (
       <div>
         <Home />
-        <UserPage />
+        <UserPage users={this.state.users} key={this.state.index}/>
       </div>
   
   )

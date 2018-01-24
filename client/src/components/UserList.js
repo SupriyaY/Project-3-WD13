@@ -4,28 +4,25 @@ import User from './User'
 
 class UserList extends Component {
 
-    render() 
+    render()
     {
-//         const buyerList = this.props.shoppers.map((shopper, index) => {
-// return (
-// <UserList
-// key={index}
-// username={shopper.username}
-// name={shopper.name}
-// email={shopper.email}
-// photo_url={shopper.photo_url} />
 
-// )
+        const userComponents = this.props.users.map((user, index) => {
+                return (<User
+                    key={index}
+                    username={user.username}
+                    name={user.name}
+                    email={user.email}
+                    photo_url={user.photo_url}/>)
 
-// })
-
+            })
 
         return (
 
             <div>
-        {/* {buyerList} */}
-        Hello from userlist!
-        <User />
+                {userComponents}
+                Hello from userlist!
+                <User/>
             </div>
 
         )
