@@ -164,7 +164,7 @@ User
         const okhunlee = new User({username: 'Olee', 
         name: 'Okhyun Lee', 
         email: 'olee@gmail.com', 
-        photo_url : 'https://i.imgur.com/26YADxM.png?1'
+        photo_url: 'https://i.imgur.com/26YADxM.png?1'
 })
 
         const bedthree = new Room({room_name: 'Bedroom'})

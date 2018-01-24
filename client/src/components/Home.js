@@ -7,7 +7,7 @@ class Home extends Component {
     render() {
         return (
             <div>
-<h1>Home</h1>
+<h1>RoomStyle</h1>
 
 <div>
   <Link to="/users">Users</Link>  

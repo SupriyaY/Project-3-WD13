@@ -1,5 +1,5 @@
 const express = require('express')
-const router = express.Router()
+const router = express.Router({mergeParams:true})
 const User = require('../db/models/User')
 
 
@@ -38,19 +38,19 @@ router.get('/', (request, response) => {
 
 
 //SHOW
-// router.get('/:userId', (request, response) => {
-//     const userId = request.params.userId
-//     User
-//         .findById(userId)
-//         .then((user) => {
-//             response.json('users/show', {user, pageTitle: 'Username'})
+router.get('/:userId', (request, response) => {
+    const userId = request.params.userId
+    User
+        .findById(userId)
+        .then((user) => {
+            response.json(user)
 
-//         })
-//         .catch((error) => {
-//             console.log(error)
+        })
+        .catch((error) => {
+            console.log(error)
 
-//         })
-// })
+        })
+})
 
 
 
