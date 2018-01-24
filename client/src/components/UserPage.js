@@ -24,7 +24,7 @@ class UserPage extends Component {
                     <UserList users={this.props.users}/>
                 </div>
                 <div>
-                    <Button>Create User</Button>
+                    <Button Onclick>Create User</Button>
                 </div>
             </div>
         )

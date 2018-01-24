@@ -16,25 +16,24 @@ router.get('/', (request, response) => {
 
 
 
-///NEW
-// router.get('/new', (request, response) => {
-//     res.json('users/new', {pageTitle: 'New User'})
-// })
-// router.post('/', (request, response) => {
-//     const newUser = request.body
-//     if (!newUser.photo_url) {
-//         newUser.photo_url = 'https://i.imgur.com/xln20Nb.jpg?1'
+///NEW USER
+router.get('/new', (request, response) => {
+    response.json('users/new', {pageTitle: 'New User'})
+})
+router.post('/', (request, response) => {
+    const newUser = request.body
+    if (!newUser.photo_url) {
+        newUser.photo_url = 'https://i.imgur.com/xln20Nb.jpg?1'
 
-//     }
-//     User
-//         .create(newUser)
-//         .then(() => {
-//             response.redirect('/users')
-//         })
-//         .catch((error) => {
-//             console.log(error)
-//         })
-// })
+    }
+    User.create(newUser)
+        .then(() => {
+            response.json(newUser)
+        })
+        .catch((error) => {
+            console.log(error)
+        })
+})
 
 
 //SHOW
@@ -85,15 +84,16 @@ router.get('/:userId', (request, response) => {
 // })
 
 
-//DELETE
-router.delete('/:userId', (request, response) => {
+// //DELETE
+router.get('/:userId/delete', (request, response) => {
     const userId = request.params.userId
     User
         .findByIdAndRemove(userId)
-        res.sendStatus(200) // Send back a status of 200 to tell the client hat the delete was successful
+        .then(() => {
+            response.redirect('/users')
+        })
         .catch((error) => {
             console.log(error)
-res.sendStatus(200) // Send back a status of 200 to tell the client that the delete was successful
         })
 
 })

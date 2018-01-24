@@ -46,10 +46,10 @@ class UserView extends Component {
                 </div>
 
                 <div>
-                    <Button onClick>Edit</Button>
-                    <Button onClick={this.deleteUser}>
-                    Delete
-                    </Button >
+                    <Button>Edit</Button>
+                 <Link to={`${this.state.user._id}/delete`}>
+                 <Button>Delete</Button></Link>
+
                 </div>
             </div>
         )
@@ -57,10 +57,5 @@ class UserView extends Component {
     }
 
 }
-
-
-
-
-
 
 export default UserView;
