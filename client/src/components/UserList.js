@@ -11,9 +11,10 @@ class UserList extends Component {
                 return (<User
                     key={index}
                     username={user.username}
-                    name={user.name}
-                    email={user.email}
-                    photo_url={user.photo_url}/>)
+                     name={user.name}
+                     email={user.email}
+                     photo_url={user.photo_url}
+                    />)
 
             })
 
@@ -21,7 +22,6 @@ class UserList extends Component {
 
             <div>
                 {userComponents}
-                Hello from userlist!
                 <User/>
             </div>
 

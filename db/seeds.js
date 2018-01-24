@@ -28,8 +28,8 @@ User
     .then(() => {
         const ared = new User({
         username: 'AReddick', 
-        name: 'Ayana Reddick', 
-        email: 'areddick@gmail.com', photo_url: ''})
+        name: 'Ayana Reddick', email: 'areddick@gmail.com', 
+        photo_url: 'https://i.imgur.com/E2kISO8.png?1'})
 
         const bedone = new Room({room_name: 'Bedroom'})
         const furnone = new Furnishing({
@@ -87,17 +87,15 @@ User
             .furnishingsToAdd
             .push(furnfour)
 
-        ared.rooms.push(bedone, bathone, livingone, kitchenone)
+        ared
+            .rooms
+            .push(bedone, bathone, livingone, kitchenone)
 
         return ared.save()
     })
     .then(() => {
 
-        const bschoenfeld = new User({
-        username: 'BSchen', 
-        name: 'Beth Schoenfeld', 
-        email: 'bschoenfeld@gmail.com', 
-        photo_url: ''})
+        const bschoenfeld = new User({username: 'BSchen', name: 'Beth Schoenfeld', email: 'bschoenfeld@gmail.com', photo_url: 'https://i.imgur.com/gO97E4f.png?2'})
 
         const bedtwo = new Room({room_name: 'Bedroom'})
         const furnfive = new Furnishing({
@@ -163,7 +161,11 @@ User
 
     })
     .then(() => {
-        const okhunlee = new User({username: 'Olee', name: 'Okhyun Lee', email: 'olee@gmail.com', photo_url: ''})
+        const okhunlee = new User({username: 'Olee', 
+        name: 'Okhyun Lee', 
+        email: 'olee@gmail.com', 
+photo_url : 'https://i.imgur.com/26YADxM.png?1'
+})
 
         const bedthree = new Room({room_name: 'Bedroom'})
         const furnnine = new Furnishing({
@@ -229,7 +231,7 @@ User
 
     })
     .then(() => {
-        const driffel = new User({username: 'DRiff', name: 'Diana Riffel', email: 'driffel@gmail.com', photo_url: ''})
+        const driffel = new User({username: 'DRiff', name: 'Diana Riffel', email: 'driffel@gmail.com', photo_url: 'https://i.imgur.com/wzdv70Z.png?1'})
 
         const bedfour = new Room({room_name: 'Bedroom'})
         const furnthirteen = new Furnishing({
@@ -297,12 +299,12 @@ User
                 console.log('Error saving seeded data!')
                 console.log(error)
             })
-        })
-            .then(() => {
-                mongoose
-                    .connection
-                    .close()
-                console.log(`Finished seeding database...
+    })
+    .then(() => {
+        mongoose
+            .connection
+            .close()
+        console.log(`Finished seeding database...
     Disconnected from MongoDB
     `)
-            })
+    })

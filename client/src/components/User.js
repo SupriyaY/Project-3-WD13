@@ -6,10 +6,10 @@ class User extends Component {
 
         return (
             <div>
-<div>UserName{this.props.username} </div>
-<div>Name{this.props.name}</div>
-<div>Email{this.props.email}</div>
-<div>User Picture{this.props.photo_url}</div>
+<div>username {this.props.username} </div>
+<div>name {this.props.name}</div>
+<div>email {this.props.email}</div>
+<div>{this.props.photo_url}</div>
             </div>
 
         )
