@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 //import {Redirect} from 'react-router-dom'
-//import UserList from './UserList'
+import UserList from './UserList'
 
 class UserPage extends Component {
 
@@ -10,6 +10,7 @@ class UserPage extends Component {
             <div>
 
                 Hello UserPage!
+                <UserList />
             </div>
 
         )
