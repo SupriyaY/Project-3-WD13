@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-//import {Redirect} from 'react-router-dom'
+import {Redirect} from 'react-router-dom'
 import User from './User'
 
 class UserList extends Component {
@@ -10,10 +10,7 @@ class UserList extends Component {
         const userComponents = this.props.users.map((user, index) => {
                 return (<User
                     key={index}
-                    username={user.username}
-                     name={user.name}
-                     email={user.email}
-                     photo_url={user.photo_url}
+                    {...user}
                     />)
 
             })
@@ -22,7 +19,7 @@ class UserList extends Component {
 
             <div>
                 {userComponents}
-                <User/>
+       
             </div>
 
         )

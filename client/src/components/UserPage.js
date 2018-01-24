@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-//import {Redirect} from 'react-router-dom'
+import {Redirect} from 'react-router-dom'
 import UserList from './UserList'
 
 class UserPage extends Component {
@@ -8,7 +8,6 @@ class UserPage extends Component {
         return (
 
             <div>
-
                 Hello UserPage!
                 <UserList users={this.props.users}/>
             </div>
