@@ -25,6 +25,7 @@ class UserList extends Component {
             <div>
         {/* {buyerList} */}
         Hello from userlist!
+        <User />
             </div>
 
         )

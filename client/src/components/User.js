@@ -1,22 +1,19 @@
-// import React, {Component} from 'react';
+import React, {Component} from 'react';
 
-// class User extends Component {
+class User extends Component {
 
-//     render() {
-//         <User 
-//         {this.props.name}
-//         {this.props.username}
-//         {this.props.email}
-//         {this.props.photo_url}      
-//         />
+    render() {
+    
 
-//         return (
-            
+        return (
+          <div>
+              Hello from User!
+              </div>  
 
-//         )
+        )
 
-//     }
+    }
 
-// }
+ }
 
-// export default User;
+export default User;
