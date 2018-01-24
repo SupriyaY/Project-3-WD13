@@ -86,17 +86,17 @@ router.get('/:userId', (request, response) => {
 
 
 //DELETE
-// router.get('/:userId/delete', (request, response) => {
-//     const userId = request.params.userId
-//     User
-//         .findByIdAndRemove(userId)
-//         res.sendStatus(200) // Send back a status of 200 to tell the client hat the delete was successful
-//         .catch((error) => {
-//             console.log(error)
-//res.sendStatus(200) // Send back a status of 200 to tell the client that the delete was successful
-//         })
+router.delete('/:userId', (request, response) => {
+    const userId = request.params.userId
+    User
+        .findByIdAndRemove(userId)
+        res.sendStatus(200) // Send back a status of 200 to tell the client hat the delete was successful
+        .catch((error) => {
+            console.log(error)
+res.sendStatus(200) // Send back a status of 200 to tell the client that the delete was successful
+        })
 
-// })
+})
 
 
 

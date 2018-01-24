@@ -9,6 +9,18 @@ const Title = styled.h1 `
   color: turquoise;
 `;
 
+const Button = styled.button ` 
+color: turquoise;
+font-size: 1em;
+margin: 1em;
+padding: 0.25em 1em;
+border: 2px solid turquoise;
+border-radius: 3px;
+`;
+
+
+
+
 // const Content = styled.div` width: 100vw height:
 
 class Home extends Component {
@@ -21,9 +33,9 @@ class Home extends Component {
                 <Title>RoomStyle</Title>
                 </div>
 <div>
-                 <button><Link to="/users">Users</Link></button>
-                   <button><Link to="#">Rooms</Link></button>
-                   <button><Link to="#">Funishings</Link></button>
+                 <Button><Link to="/users">Users</Link></Button>
+                   <Button><Link to="#">Rooms</Link></Button>
+                   <Button><Link to="#">Funishings</Link></Button>
                     </div>
 </div>
         )
