@@ -30,36 +30,29 @@ const res = await axios.get('/api/users')
 this.setState({users: res.data})
 }
 
-// //creating a new user
-// handleSubmit = async (e) => {
-// e.preventDefault()
-// const letsbuy = {
-// name: this.state.newUser.
+//creating a new user
+handleSubmit = async (e) => {
+e.preventDefault()
+const letsbuy = {
+name: this.state.newUser,
+photo_url: this.state.newUser.photo_url
+}
 
-// }
+const blankForm = {
+name: '',
+photo_url: ''
+}
 
+const res = await axios.post('/api/user', letsbuy)
+this.setState({redirect: true, newUser: blankForm, newUser: res.data._id})
 
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+handleChange = (e) => {
+const newUser = {...this.state.newUser}
+newUser[e.targert.name] = e.target.value
+this.setState({ newUser })
+}
 
 
 

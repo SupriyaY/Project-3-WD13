@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom'
 import UserPage from './UserPage'
 import styled from 'styled-components'
 
+
 const Title = styled.h1 `
   font-size: 3.5em;
   text-align: center;
@@ -17,7 +18,7 @@ padding: 0.25em 1em;
 border: 2px solid turquoise;
 border-radius: 3px;
 `;
-
+//these need to move to the bottom -- flexbox
 
 
 

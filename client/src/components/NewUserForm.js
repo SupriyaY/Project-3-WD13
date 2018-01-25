@@ -10,6 +10,7 @@ return (<Redirect to={`/users/${props.id}`}/>)
 }
 
 return (
+<UserAdd>
 <h2>Add User</h2>
 <form onSubmit={props.handleSumbit}>
 <div>
@@ -30,9 +31,25 @@ name="name"
     type="text"
 />
 </div>
-<button>Submit</button>
+<Button>Submit</Button>
 
 </form>
+</UserAdd>
 )
 }
+
+
 export default NewUserForm
+
+
+// /* Input form styles */
+//     .form - input {
+//     margin: 6 px;
+//     display: flex;
+//     justify - content: flex - end;
+//     align - items: center;
+//     text - align: right;
+// }.form - input label {
+//     /* width: 30vh; */
+//     height : 4 vh;
+// }.label {cursor: default;}
