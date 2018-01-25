@@ -30,17 +30,35 @@ const res = await axios.get('/api/users')
 this.setState({users: res.data})
 }
 
-handleSubmit = async (e) => {
-const letsbuy = {
+// //creating a new user
+// handleSubmit = async (e) => {
+// e.preventDefault()
+// const letsbuy = {
+// name: this.state.newUser.
+
+// }
 
 
-}
 
 
 
 
 
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
