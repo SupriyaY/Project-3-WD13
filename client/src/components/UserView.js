@@ -24,7 +24,6 @@ class UserView extends Component {
     getUserInfo = async() => {
         try {
             const {userId} = this.props.match.params
-
             const res = await axios.get(`/api/users/${userId}`)
             console.log(res.data)
             this.setState({user: res.data})
@@ -36,7 +35,7 @@ class UserView extends Component {
     banannaDelete = async () => {
     try {
     const {userId} = this.props.match.params
-     const res = await axios.delete(`/api/${userId}/delete`)
+     const res = await axios.delete(`/api/users/${userId}`)
      console.log(res.data)
      this.setState({user: res.data, redirect: true})
     } catch (err) {
@@ -44,8 +43,7 @@ class UserView extends Component {
     }
 }
     render() {
-
-        if (this.state.isDeleted === "true") {
+        if (this.state.redirect === "true") {
             return (<Redirect to={`/users`}/>)
         }
         const {userId} = this.props.match.params
@@ -54,15 +52,14 @@ class UserView extends Component {
                 <div>
                     <div><img src={this.state.user.photo_url}/></div>
                     <div>username: {this.state.user.username}</div>
-                    <div>{this.state.user.name}</div>
+                    <div>name: {this.state.user.name}</div>
                     <div>email: {this.state.user.email}</div>
 
                 </div>
 
                 <div>
                     <Button>Edit</Button>
-                 <Link to={`${this.state.user._id}/delete`}>
-                 <Button>Delete</Button></Link>
+                 <Button onClick ={this.banannaDelete}>Delete</Button>
 
                 </div>
             </div>

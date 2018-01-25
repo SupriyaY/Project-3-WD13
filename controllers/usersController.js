@@ -85,8 +85,9 @@ router.get('/:userId', (request, response) => {
 
 
 // //DELETE
-router.get('/:userId/delete', (request, response) => {
+router.delete('/:userId', (request, response) => {
     const userId = request.params.userId
+    console.log(userId)
     User
         .findByIdAndRemove(userId)
         .then(() => {
