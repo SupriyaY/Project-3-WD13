@@ -2,7 +2,29 @@ import React from 'react'
 import {Redirect} from 'react-router-dom'
 import styled from 'styled-components'
 
+//testing using project 2's styling
+const UserAdd = styled.div `
+margin: 0 auto;     
+display: flex;     
+justify - content: flex - end;
+align - items: center;    
+text - align: right;
+padding: 20px
+    input{
+        display: flex;
+        align-items: center;
+width: 100px;
+height: 20px;
+`;
+const Button = styled.button `
+color: turquoise;
+font-size : 1em;
+margin : 1em;
+padding : 0.25em 1em;
+border : 2px solid turquoise;
+border-radius : 3px;
 
+ `;
 const NewUserForm = (props) => {
 
 if (props.redirect) {
@@ -13,25 +35,37 @@ return (
 <UserAdd>
 <h2>Add User</h2>
 <form onSubmit={props.handleSumbit}>
+
 <div>
 <input
 value={props.user.name}
 type="text"
 placeholder="Name"
-onChange={(e) => handleChange(e)}
+onChange={(e) => props.handleChange(e)}
 name="name"
 />
 </div>
+
+
 <div>
     <input
     value={props.user.photo_url}
-    placeholder="image"
+    placeholder="Image"
     onChange={(e) => props.handleChange(e)}
     name="photo_url"
     type="text"
 />
 </div>
-<Button>Submit</Button>
+<div> 
+<input
+    value={props.user.email}
+    placeholder="Email"
+    onChange={(e) => props.handleChange(e)}
+    name="email"
+    type="text"/> 
+    </div>
+
+<Button>Create User</Button>
 
 </form>
 </UserAdd>

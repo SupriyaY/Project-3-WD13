@@ -17,23 +17,34 @@ router.get('/', (request, response) => {
 
 
 ///NEW USER
-router.get('/new', (request, response) => {
-    response.json('users/new', {pageTitle: 'New User'})
-})
-router.post('/', (request, response) => {
-    const newUser = request.body
-    if (!newUser.photo_url) {
-        newUser.photo_url = 'https://i.imgur.com/xln20Nb.jpg?1'
+// router.get('/new', (request, response) => {
+//     response.json('users/new', {pageTitle: 'New User'})
+// })
+// router.post('/', (request, response) => {
+//     const newUser = request.body
+//     if (!newUser.photo_url) {
+//         newUser.photo_url = 'https://i.imgur.com/xln20Nb.jpg?1'
 
+//     }
+//     User.create(newUser)
+//         .then((user) => {
+//             response.json(user)
+//         })
+//         .catch((error) => {
+//             response.send(err)
+//         })
+// })
+
+router.post('/', async(req, res) => {
+    try {
+        const newUser = await User.create(req.body)
+        res.json(newUser)
+    } catch (err) {
+        console.log(err)
+        res.sendStatus(500)
     }
-    User.create(newUser)
-        .then(() => {
-            response.json(newUser)
-        })
-        .catch((error) => {
-            console.log(error)
-        })
 })
+
 
 
 //SHOW
