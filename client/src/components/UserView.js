@@ -33,7 +33,21 @@ class UserView extends Component {
         }
     }
 
+    banannaDelete = async () => {
+    try {
+    const {userId} = this.props.match.params
+     const res = await axios.delete(`/api/${userId}/delete`)
+     console.log(res.data)
+     this.setState({user: res.data, redirect: true})
+    } catch (err) {
+        console.log(err)
+    }
+}
     render() {
+
+        if (this.state.isDeleted === "true") {
+            return (<Redirect to={`/users`}/>)
+        }
         const {userId} = this.props.match.params
         return (
             <div>

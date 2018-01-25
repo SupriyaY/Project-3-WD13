@@ -90,7 +90,7 @@ router.get('/:userId/delete', (request, response) => {
     User
         .findByIdAndRemove(userId)
         .then(() => {
-            response.redirect('/users')
+            response.json({isDeleted : "true"})
         })
         .catch((error) => {
             console.log(error)
