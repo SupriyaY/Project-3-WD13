@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import {Redirect, Link} from 'react-router-dom'
+import {Redirect} from 'react-router-dom'
 import axios from 'axios'
 import styled from 'styled-components'
 import EditUserForm from './EditUserForm'
@@ -26,6 +26,7 @@ background: linear-gradient(to left, #FF5F6D, #FFC371);
 class UserView extends Component {
     state = {
         user: {}
+      
 
     }
     componentWillMount() {
@@ -54,11 +55,37 @@ class UserView extends Component {
         }
     }
 
+    handleSubmit = async(e) => {
+        console.log("Submitting User")
+        e.preventDefault()
+        const letsbuy = {
+            _id: this.state.user._id,
+            name: this.state.user.name,
+            username: this.state.user.username,
+            photo_url: this.state.user.photo_url,
+            email: this.state.user.email
+        }
 
+        console.log("Submitting user:", letsbuy)
+        const res = await axios.patch(`/api/users/${this.state.user._id}`, letsbuy)
+        console.log('Posted user', res.data)
+        this.setState({redirect: false, newUser: res.data})
 
+    }
+
+    handleChange = (e) => {
+        console.log("Changing name to value:", e.target.name, e.target.value)
+        const user = {
+            ...this.state.user
+        }
+
+        user[e.target.name] = e.target.value
+        this.setState({user})
+    }
 
     render() {
-        if (this.state.redirect === "true") {
+        console.log("Rendering UserView.User:", this.state.user)
+        if (this.state.redirect === true) {
             return (<Redirect to={`/users`}/>)
         }
 
@@ -73,17 +100,11 @@ class UserView extends Component {
                 </div>
 
                 <div>
-< EditUserForm
-user = {
-    this.state.user
-}
-handleChange = {
-    this.handleChange
-}
-handleSubmit = {
-    this.handleSubmit
-} />
-                    
+                    <EditUserForm
+                        user={this.state.user}
+                        handleChange={this.handleChange}
+                        handleSubmit={this.handleSubmit}/>
+
                     <Button onClick={this.banannaDelete}>Delete</Button>
 
                 </div>

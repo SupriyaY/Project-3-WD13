@@ -3,20 +3,10 @@ import axios from 'axios'
 import {Redirect} from 'react-router-dom'
 import styled from 'styled-components'
 
-// const UserAdd = styled.div ` 
-// margin: 0 auto; 
-// display: flex; 
-// justify - content: flex - end; 
-// align - items: center; 
-// text - align: right; 
-// padding:20px  
-// `;   
-// // input{         
-// //     display: flex;         
-// //     align-items: center; 
-// //     width:100px; 
-// //     height: 20px;     
-// // };     
+// const UserAdd = styled.div ` margin: 0 auto; display: flex; justify -
+// content: flex - end; align - items: center; text - align: right; padding:20px
+// `; // input{ //     display: flex; //     align-items: center; //
+// width:100px; //     height: 20px; // };
 
 const Button = styled.div `  
 color: turquoise; 
@@ -58,8 +48,9 @@ const EditUserForm = (props) => (
                 type="text"/>
         </div>
 
-        
-            <Button onClick="#">Edit</Button>
+        <div>
+            <Button onClick={props.handleSubmit}>edit</Button>
+        </div>
     </form>
 )
 
