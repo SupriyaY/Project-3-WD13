@@ -39,15 +39,7 @@ router.post('/', (request, response) => {
         })
 })
 
-// router.post('/', async(req, res) => {
-//     try {
-//         const newUser = await User.create(req.body)
-//         res.json(newUser)
-//     } catch (err) {
-//         console.log(err)
-//         res.sendStatus(500)
-//     }
-// })
+
 
 
 
@@ -68,19 +60,19 @@ router.get('/:userId', (request, response) => {
 
 
 //UPDATE
-// router.patch('/:userId', (req, res) => {
-//     const userUpdate = req.body
-//     const userId = req.params.userId
+router.patch('/:userId', (req, res) => {
+    const userUpdate = req.body
+    const userId = req.params.userId
 
-//     User
-//         .findByIdAndUpdate(userId, userUpdate)
-//         .then(user => {
-//             res.json(user)
-//         })
-//         .catch((err) => {
-//             console.log(err)
-//         })
-// })
+    User
+        .findByIdAndUpdate(userId, userUpdate)
+        .then(user => {
+            res.json(user)
+        })
+        .catch((err) => {
+            console.log(err)
+        })
+})
 
 
 //DELETE

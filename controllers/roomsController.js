@@ -17,8 +17,9 @@ const User = require('../db/models/User')
 
 
 
-// router.get('/:cityId', (request, response) => {
-//     const userId = request.params.userId
+
+
+// router.get('/:roomId', (request, response) => {
 //     const cityId = request.params.cityId
 
 //     User

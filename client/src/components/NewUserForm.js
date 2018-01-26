@@ -37,7 +37,7 @@ return (<Redirect to={`/users/${props.id}`}/>)
 return (
 
 <UserAdd>
-<h2>Add User</h2>
+<h2>Add Designer</h2>
 <form onSubmit={props.handleSubmit}>
 
 <div>
@@ -46,8 +46,7 @@ value={props.user.name}
 type="text"
 placeholder="Name"
 onChange={(e) => props.handleChange(e)}
-name="name"
-/>
+name="name"/>
 </div>
 
 <div> 
