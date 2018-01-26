@@ -18,32 +18,36 @@ router.get('/', (request, response) => {
 
 ///NEW USER
 // router.get('/new', (request, response) => {
-//     response.json('users/new', {pageTitle: 'New User'})
+//     response.json(){pageTitle: 'New User'})
 // })
-// router.post('/', (request, response) => {
-//     const newUser = request.body
-//     if (!newUser.photo_url) {
-//         newUser.photo_url = 'https://i.imgur.com/xln20Nb.jpg?1'
+router.post('/', (request, response) => {
+    console.log('posting new user', request.body)
+    const newUser = request.body
+    if (!newUser.photo_url) {
+        newUser.photo_url = 'https://i.imgur.com/xln20Nb.jpg?1'
 
-//     }
-//     User.create(newUser)
-//         .then((user) => {
-//             response.json(user)
-//         })
-//         .catch((error) => {
-//             response.send(err)
-//         })
-// })
-
-router.post('/', async(req, res) => {
-    try {
-        const newUser = await User.create(req.body)
-        res.json(newUser)
-    } catch (err) {
-        console.log(err)
-        res.sendStatus(500)
     }
+    console.log("About to update DB")
+    User.create(newUser)
+.then((user) => {
+    console.log("updates DB")
+            response.json(user)
+        })
+        .catch((err) => {
+            console.error("SHIT", err)
+            response.send(err)
+        })
 })
+
+// router.post('/', async(req, res) => {
+//     try {
+//         const newUser = await User.create(req.body)
+//         res.json(newUser)
+//     } catch (err) {
+//         console.log(err)
+//         res.sendStatus(500)
+//     }
+// })
 
 
 
@@ -63,39 +67,23 @@ router.get('/:userId', (request, response) => {
 })
 
 
-
 //UPDATE
-// router.patch('/:userId', (request, response) => {
-//     const userId = request.params.userId
-//     const updatedUserInfo = request.body
-//     User.findByIdAndUpdate(userId, updatedUserInfo, {new: true})
+// router.patch('/:userId', (req, res) => {
+//     const userUpdate = req.body
+//     const userId = req.params.userId
 
-//     response.json(UpdatedUser)
-//         .catch((error) => {
-//             console.log
-//         })
-
-// })
-
-
-
-
-//EDIT
-// router.get('/:userId/edit', (request, response) => {
-//     const userId = request.params.userId
 //     User
-//         .findById(userId)
-//         .then((user) => {
-//             response.json('users/edit', {user, pageTitle: 'Profile_Update'})
+//         .findByIdAndUpdate(userId, userUpdate)
+//         .then(user => {
+//             res.json(user)
 //         })
-//         .catch((error) => {
-//             console.log
+//         .catch((err) => {
+//             console.log(err)
 //         })
-
 // })
 
 
-// //DELETE
+//DELETE
 router.delete('/:userId', (request, response) => {
     const userId = request.params.userId
     console.log(userId)

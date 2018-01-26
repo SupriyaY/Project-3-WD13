@@ -6,17 +6,10 @@ const User = require('../db/models/User')
 
 // router.get('/', (request, response) => {
 //     const userId = request.params.userId
-
-//     User
-//         .findById(userId)
+//     User.findById(userId)
 //         .then((user) => {
-//             response.render('cities/index', {
-//                 userName: `${user.name}`,
-//                 userId: user._id,
-//                 cities: user.cities,
-//                 pageTitle: 'Cities'
+//             response.json(user)
 //             })
-//         })
 //         .catch((error) => {
 //             console.log(error)
 //         })

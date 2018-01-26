@@ -16,7 +16,7 @@ padding: 20px
 width: 100px;
 height: 20px;
 `;
-const Button = styled.button `
+const Button = styled.button`
 color: turquoise;
 font-size : 1em;
 margin : 1em;
@@ -25,6 +25,9 @@ border : 2px solid turquoise;
 border-radius : 3px;
 
  `;
+
+
+
 const NewUserForm = (props) => {
 
 if (props.redirect) {
@@ -32,9 +35,10 @@ return (<Redirect to={`/users/${props.id}`}/>)
 }
 
 return (
+
 <UserAdd>
 <h2>Add User</h2>
-<form onSubmit={props.handleSumbit}>
+<form onSubmit={props.handleSubmit}>
 
 <div>
 <input
@@ -46,6 +50,14 @@ name="name"
 />
 </div>
 
+<div> 
+    <input
+    value={props.user.username}
+    type="text"
+    placeholder="Username"
+    onChange={(e) => props.handleChange(e)}
+    name="username"/> 
+    </div>
 
 <div>
     <input
@@ -65,7 +77,7 @@ name="name"
     type="text"/> 
     </div>
 
-<Button>Create User</Button>
+<Button type="submit">Create User</Button>
 
 </form>
 </UserAdd>

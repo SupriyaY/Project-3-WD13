@@ -59,7 +59,7 @@ class UserView extends Component {
 
                 <div>
                     <Button>Edit</Button>
-                 <Button onClick ={this.banannaDelete}>Delete</Button>
+                 <Button onClick={this.banannaDelete}>Delete</Button>
 
                 </div>
             </div>

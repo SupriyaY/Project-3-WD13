@@ -9,7 +9,8 @@ import axios from 'axios'
 class App extends Component {
 
   state = {
-    users: []
+    users: [],
+    user: {}
   }
   componentWillMount() {
     this.getAllUsers()

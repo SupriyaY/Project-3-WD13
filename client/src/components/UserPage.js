@@ -15,6 +15,16 @@ border: 2px solid turquoise;
 border-radius: 3px;
 `;
 
+const Body = styled.div `
+margin: 0;
+width: 100%;
+height: 100%;
+position: relative;
+background: #FFBC73;
+background: -webkit-linear-gradient(to left, #FF5F6D, #FFC371);
+background: linear-gradient(to left, #FF5F6D, #FFC371);
+`;
+
 class UserPage extends Component {
 
     //set state
@@ -34,18 +44,16 @@ class UserPage extends Component {
     handleSubmit = async(e) => {
         e.preventDefault()
         const letsbuy = {
-            name: this.state.newUser,
-            photo_url: this.state.newUser.photo_url
-            
+            name: this.state.newUser.name,
+            username: this.state.newUser.username,
+            photo_url: this.state.newUser.photo_url,
+            email: this.state.newUser.email
         }
 
-        const blankForm = {
-            name: '',
-            photo_url: ''
-        }
-
-        const res = await axios.post('/api/user', letsbuy)
-        this.setState({redirect: true, newUser: res.data})
+        console.log('about to post', letsbuy)
+        const res = await axios.post('/api/users', letsbuy)
+        console.log('posted')
+        this.setState({redirect: false, newUser: res.data})
 
     }
 
@@ -59,7 +67,7 @@ class UserPage extends Component {
 
     render() {
         return (
-            <div>
+            <Body>
                 <div>
                     <NewUserForm
                         users={this.state.users}
@@ -67,14 +75,14 @@ class UserPage extends Component {
                         id={this.state.newUserId}
                         redirect={this.state.redirect}
                         handleChange={this.handleChange}
-                        handleSubmit={this.handleSubmit}/>
+                        handleSubmit={this.handleSubmit}
+                        />
                 </div>
                 <div>
-                    Hello UserPage!
+                    <h1>Room Designers</h1>
                     <UserList users={this.props.users}/>
                 </div>
-
-            </div>
+            </Body>
         )
     }
 
