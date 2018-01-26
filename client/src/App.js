@@ -7,22 +7,32 @@ import UserView from './components/UserView'
 import axios from 'axios'
 
 class App extends Component {
+constructor(){
+  super()
 
-  state = {
-    users: [],
-    user: {}
-  }
+this.state = {
+  users: [],
+  user: {}
+}
+
+this.getAllUsers = this
+.getAllUsers
+  .bind(this);
+
+}
+  
   componentWillMount() {
     this.getAllUsers()
 
   }
 
   async getAllUsers() {
+    console.log("GETTING ALL USERS")
     try {
       const response = await axios.get('/api/users')
       const users = response.data
-      console.log(users)
-      this.setState({users: users})
+      console.log("Users:", users)
+      this.setState({users})
     } catch (error) {
       console.log(error)
     }
@@ -30,8 +40,9 @@ class App extends Component {
   }
 
   render() { 
-    const userInfo = () => (<UserPage users={this.state.users}/>)
-    const userView = (props) => (<UserView users={this.state.users} {...props}/>)
+    const userInfo = () => (<UserPage users={this.state.users} 
+    getAllUsers={this.getAllUsers} /> )
+const userView = (props) => (<UserView users={this.state.users} getAllUsers={this.getAllUsers} {...props}/>)
     // const userInfo = () => (<UserPage users={this.state.user}/>) 
 {/* <UserPage users={this.state.users} key={this.state.index}/> */
 }

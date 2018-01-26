@@ -63,7 +63,7 @@ router.get('/:userId', (request, response) => {
 router.patch('/:userId', (req, res) => {
     const userUpdate = req.body
     const userId = req.params.userId
-
+console.log(userId)
     User.findByIdAndUpdate(userId, userUpdate)
         .then(user => {
             res.json(user)

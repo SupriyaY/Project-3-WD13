@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import {Redirect} from 'react-router-dom'
+import {Redirect, Link} from 'react-router-dom'
 import axios from 'axios'
 import styled from 'styled-components'
 import EditUserForm from './EditUserForm'
@@ -25,8 +25,8 @@ background: linear-gradient(to left, #FF5F6D, #FFC371);
 
 class UserView extends Component {
     state = {
-        user: {}
-      
+        user: {},
+        redirect: false
 
     }
     componentWillMount() {
@@ -49,7 +49,8 @@ class UserView extends Component {
             const {userId} = this.props.match.params
             const res = await axios.delete(`/api/users/${userId}`)
             console.log(res.data)
-            this.setState({user: res.data, redirect: true})
+            this.props.getAllUsers()
+            this.setState({redirect: true, user: res.data})
         } catch (err) {
             console.log(err)
         }
@@ -85,7 +86,8 @@ class UserView extends Component {
 
     render() {
         console.log("Rendering UserView.User:", this.state.user)
-        if (this.state.redirect === true) {
+        // if (this.state.redirect === true) {     return (<Redirect to={`/users`}/>) }
+        if (this.state.redirect) {
             return (<Redirect to={`/users`}/>)
         }
 

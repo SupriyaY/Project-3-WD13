@@ -30,7 +30,6 @@ class UserPage extends Component {
     //set state
     state = {
         newUser: [],
-        redirect: false,
         newUserid: ''
     }
 
@@ -53,7 +52,7 @@ class UserPage extends Component {
         console.log('about to post', letsbuy)
         const res = await axios.post('/api/users', letsbuy)
         console.log('posted')
-        this.setState({redirect: false, newUser: res.data})
+        this.props.getAllUsers()
 
     }
 
