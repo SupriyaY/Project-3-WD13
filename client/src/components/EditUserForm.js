@@ -8,7 +8,7 @@ import styled from 'styled-components'
 // `; // input{ //     display: flex; //     align-items: center; //
 // width:100px; //     height: 20px; // };
 
-const Button = styled.div `  
+const Button = styled.button `  
 color: turquoise; 
 font-size: 1em; 
 margin: 1em; 
@@ -49,7 +49,7 @@ const EditUserForm = (props) => (
         </div>
 
         <div>
-            <Button onClick={props.handleSubmit}>edit</Button>
+            <Button onClick={props.handleSubmit}>Edit</Button>
         </div>
     </form>
 )

@@ -27,8 +27,8 @@ class UserView extends Component {
     state = {
         user: {},
         redirect: false
-
     }
+    
     componentWillMount() {
         this.getUserInfo()
     }

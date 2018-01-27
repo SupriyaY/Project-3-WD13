@@ -7,20 +7,17 @@ import UserView from './components/UserView'
 import axios from 'axios'
 
 class App extends Component {
-constructor(){
-  super()
+  constructor(){
+    super()
 
-this.state = {
-  users: [],
-  user: {}
-}
+    this.state = {
+      users: [],
+      user: {}
+    }
 
-this.getAllUsers = this
-.getAllUsers
-  .bind(this);
-
-}
-  
+    this.getAllUsers = this.getAllUsers.bind(this);
+  }
+    
   componentWillMount() {
     this.getAllUsers()
 
