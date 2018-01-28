@@ -3,37 +3,37 @@ const router = express.Router()({mergeParams: true})
 const User = require('../db/models/User')
 
 
-
-// router.get('/', (request, response) => {
-//     const userId = request.params.userId
-//     User.findById(userId)
-//         .then((user) => {
-//             response.json(user)
-//             })
-//         .catch((error) => {
-//             console.log(error)
-//         })
-// })
-
-
+//INDEX
+router.get('/', (request, response) => {
+    const userId = request.params.userId
+    User.findById(userId)
+        .then((user) => {
+            response.json(user)
+            })
+        .catch((error) => {
+            console.log(error)
+        })
+})
 
 
 
-// router.get('/:roomId', (request, response) => {
-//     const cityId = request.params.cityId
 
-//     User
-//         .findById(userId)
-//         .then((user) => {
-//             const city = user
-//                 .cities
-//                 .id(cityId)
-//             response.render('cities/show', {userId, city, pageTitle: 'City'})
-//         })
-//         .catch((error) => {
-//             console.log(error)
-//         })
-// })
+//SHOW
+router.get('/:roomId', (request, response) => {
+    const roomId = request.params.roomId
+
+    User
+        .findById(userId)
+        .then((user) => {
+            const room = user
+                .rooms
+                .id(roomId)
+            response.json(userId, room)
+        })
+        .catch((error) => {
+            console.log(error)
+        })
+})
 
 
 
