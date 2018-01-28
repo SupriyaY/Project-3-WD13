@@ -16,7 +16,7 @@ router.get('/', async(request, response) => {
 
 
 
-//SHOW
+//SHOW a particular room
 router.get('/:roomId', async(request, response) => {
     try {
         const userId = request.params.userId

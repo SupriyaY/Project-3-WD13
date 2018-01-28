@@ -3,6 +3,7 @@ import {Redirect, Link} from 'react-router-dom'
 import axios from 'axios'
 import styled from 'styled-components'
 import EditUserForm from './EditUserForm'
+import RoomPage from './RoomPage'
 
 const Button = styled.button ` 
 color: turquoise;
@@ -26,11 +27,14 @@ background: linear-gradient(to left, #FF5F6D, #FFC371);
 class UserView extends Component {
     state = {
         user: {},
+        rooms: [],
         redirect: false
     }
     
     componentWillMount() {
         this.getUserInfo()
+        this.getAll
+
     }
 
     getUserInfo = async() => {
@@ -43,8 +47,26 @@ class UserView extends Component {
             console.log(err)
         }
     }
-    //not sure about this code - it works but errors at the end
-    banannaDelete = async() => {
+
+    getAllRooms = async() => {
+try{
+const userId = this.props.match.params
+const res = await axios.get(`/api/users/${userId}/rooms`)
+console.log(res.data)
+const rooms = res.data
+this.setState({ rooms })
+}
+catch (err) {
+    console.log(err)
+}
+}
+    
+
+
+
+
+//not sure about this code - it works but errors at the end
+banannaDelete = async() => {
         try {
             const {userId} = this.props.match.params
             const res = await axios.delete(`/api/users/${userId}`)
@@ -85,7 +107,7 @@ class UserView extends Component {
     }
 
     render() {
-        console.log("Rendering UserView.User:", this.state.user)
+        console.log("Rendering UserView.User:", this.state.rooms)
         // if (this.state.redirect === true) {     return (<Redirect to={`/users`}/>) }
         if (this.state.redirect) {
             return (<Redirect to={`/users`}/>)
@@ -110,6 +132,10 @@ class UserView extends Component {
                     <Button onClick={this.banannaDelete}>Delete</Button>
 
                 </div>
+
+                <div>
+                    <RoomPage />
+                    </div>
 
             </Body>
         )
