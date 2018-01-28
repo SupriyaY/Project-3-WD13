@@ -17,34 +17,6 @@ console.log(err)
 
 
 
-
-
-
-router.get('/', (request, response) => {
-    const userId = request.params.userId
-
-    User
-        .findById(userId)
-        .then((user) => {
-            response.render('cities/index', {
-                userName: `${user.name}`,
-                userId: user._id,
-                cities: user.cities,
-                pageTitle: 'Cities'
-            })
-        })
-        .catch((error) => {
-            console.log(error)
-        })
-})
-
-
-
-
-
-
-
-
 router.get('/:Id', (request, response) => {
     const userId = request.params.userId
     const roomId = request.params.cityId

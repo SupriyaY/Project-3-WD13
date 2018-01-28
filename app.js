@@ -52,8 +52,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 ////Controllers
 const usersController = require('./controllers/usersController')
 app.use('/api/users', usersController)
-// const roomsController = require('./controllers/roomsController')
-// app.use('/api/users/:userId/rooms', roomsController)
+const roomsController = require('./controllers/roomsController')
+app.use('/api/users/:userId/rooms', roomsController)
 
 
 
