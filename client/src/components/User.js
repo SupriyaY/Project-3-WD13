@@ -12,6 +12,25 @@ import styled from 'styled-components'
 // `;
 
 
+const UserPicture = styled.div `
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+margin: 10px;
+padding: 10px;
+img {
+border-radius: 50%
+width: 20vw;
+height: 20vh; 
+}
+&:hover: {
+opacity: 0.8;
+position: relative;
+top: -20 px;
+}
+`;
+
 
 
 class User extends Component {
@@ -20,9 +39,9 @@ class User extends Component {
 
         return (
             <Link to={`/users/${this.props._id}`}>
-            <User Picture>
+            <UserPicture>
                 <div><img src={this.props.photo_url}/></div>
-                <User P
+                </UserPicture>
                <div>{this.props.name}</div>
             
             </Link>

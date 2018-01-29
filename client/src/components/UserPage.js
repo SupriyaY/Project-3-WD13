@@ -89,6 +89,7 @@ class UserPage extends Component {
             <Body>
                 <Holder>
                 <div>
+
                     <NewUserForm
                         users={this.state.users}
                         user={this.state.newUser}

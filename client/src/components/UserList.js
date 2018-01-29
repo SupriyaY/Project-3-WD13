@@ -11,17 +11,16 @@ align-items: center;
 flex-wrap: wrap;
 `;
 
-
 class UserList extends Component {
 
     render()
     {
 
-        const userComponents = this.props.users.map((user, index) => {
-                return (<User
-                    key={index}
-                    {...user}
-                    />)
+        const userComponents = this
+            .props
+            .users
+            .map((user, index) => {
+                return (<User key={index} {...user}/>)
 
             })
 
@@ -29,8 +28,8 @@ class UserList extends Component {
 
             <div>
                 <Designers>
-                {userComponents}
-       </Designers>
+                    {userComponents}
+                </Designers>
             </div>
 
         )
