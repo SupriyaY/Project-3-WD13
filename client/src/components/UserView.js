@@ -12,6 +12,12 @@ margin: 1em;
 padding: 0.25em 1em;
 border: 2px solid turquoise;
 border-radius: 3px;
+    &:hover {
+opacity: 0.8;
+position: relative;
+bottom: 5 px;
+}
+
 `;
 
 const Body = styled.div `

@@ -32,6 +32,12 @@ display: flex;
 flex-direction: column;
 justify-content: center;
 align-items: center;
+
+    a {      
+text-decoration: none;   
+align-items: center;
+justisfy-content: center; 
+    }
 `;
 
 // const Designers = styled.div `

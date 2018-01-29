@@ -9,9 +9,7 @@ flex-direction: row;
 justify-content: center;
 align-items: center;
 flex-wrap: wrap;
- a{
-     text-decoration: none;
- }
+
 `;
 
 class UserList extends Component {

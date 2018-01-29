@@ -17,12 +17,18 @@ width: 100px;
 height: 20px;
 `;
 const Button = styled.button `
-color: turquoise;
+background-color: turquoise;
+color: white;
 font-size : 1em;
 margin : 1em;
 padding : 0.25em 1em;
 border : 2px solid turquoise;
 border-radius : 3px;
+    &:hover {
+    opacity: 0.8;
+    position: relative;
+    bottom: -5px;
+    }
 
  `;
 
@@ -73,7 +79,7 @@ const NewUserForm = (props) => {
                         type="text"/>
                 </div>
 
-                <Button type="submit">Create User</Button>
+                <Button type="submit">Add Designer</Button>
 
             </form>
         </UserAdd>
