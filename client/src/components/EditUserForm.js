@@ -9,13 +9,25 @@ import styled from 'styled-components'
 // width:100px; //     height: 20px; // };
 
 const Button = styled.button `  
-color: turquoise; 
-font-size: 1em; 
-margin: 1em; 
-padding: 0.25em 1em; 
-border: 2px solid turquoise;
-border-radius: 3px;     
+background-color:turquoise;
+color:white;
+font-size: 1em;
+margin:1em;
+padding: 0.25em 1em;
+border:2px solid turquoise;
+border-radius:3 px;
+&:hover 
+{opacity: 0.8;
+    position: relative;
+    bottom: 5 px;}
+
 `;
+
+
+
+
+
+
 
 const EditUserForm = (props) => (
     <form onSubmit={props.handleSubmit}>

@@ -31,20 +31,27 @@ display: flex;
 flex-direction: column;
 justify-content: center;
 align-items: center;
-
-    a {      
-text-decoration: none;   
-align-items: center;
-justisfy-content: center; 
-font-family: 'Indie Flower',cursive;
-font-size: 1.5em;
-    }
-`;
+ `;
 
 const Friends = styled.h1 `
 font-family : 'Indie Flower',cursive;
 font-size: 3.5em;
 `;
+
+
+const Nav = styled.div`
+align-items: flex-start;
+padding: 15px;
+margin-bottom : 20px;
+a {
+    text-decoration: none;
+    align-items: left;
+    justisfy-content: left;
+    font-family: 'Indie Flower', cursive;
+    font-size: 2.5em;
+}
+`;
+
 
 //trying something out from code.io
 // const CardStyling = styled.div`
@@ -102,12 +109,12 @@ class UserPage extends Component {
     render() {
         return (
             <Body>
-                <Holder>
-                    <div>
+                
+                    <Nav>
                         <a href='/'>Home
                         </a>
-                    </div>
-
+                    </Nav>
+<Holder>
                     <div>
                         
                             <NewUserForm

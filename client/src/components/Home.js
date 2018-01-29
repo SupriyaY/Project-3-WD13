@@ -6,7 +6,7 @@ import styled from 'styled-components'
 const Title = styled.h1 `
   font-size: 5.0em;
   text-align: center;
-  color: turquoise;
+  color: black;
 font-family : 'Indie Flower',
 cursive;
 `;
@@ -63,6 +63,7 @@ const Image = styled.div`
 img{
    height: 100%;
    width: 100%;
+   opacity: .4
 }
 `;
 

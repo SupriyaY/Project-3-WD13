@@ -5,20 +5,20 @@ import FurnishingPage from './FurnishingPage'
 
 class Room extends Component {
 
-    componentWillMount() {
-        this.props.getAllFurnishings(this.props.roomId)
-    }
+    // componentWillMount() {
+    //     this.props.getAllFurnishings(this.props.roomId)
+    // }
 
     render() {
     
-    
+    console.log("Furnishings sent to Room:", this.props.furnishings)
 
         return (
 
             <div>
 
                 {this.props.room_name}
-                < FurnishingPage furnishings={this.props.furnishings} roomId={this.props.roomId}/>
+                <FurnishingPage furnishings={this.props.furnishings} roomId={this.props.roomId}/>
             </div>
 
         )

@@ -38,10 +38,6 @@ class User extends Component {
                         <div><img src={this.props.photo_url}/></div>
                     </UserPicture>
                 </div>
-                <div>
-                    {this.props.name}
-            
-                </div>
             </Link>
 
         )

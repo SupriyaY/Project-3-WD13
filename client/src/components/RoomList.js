@@ -6,6 +6,7 @@ import Room from './Room'
 
 
 const RoomList = (props) => {
+    console.log("Furnishing from RoomList:", props.rooms)
 
  const roomList = props.rooms.map((room, index) => {
         return (
@@ -13,7 +14,9 @@ const RoomList = (props) => {
                 key={index}
                 room_name={props.rooms[index].room_name}
                 roomId={props.rooms[index]._id}
-                furnishings={props.furnishings}
+furnishings = {
+    props.rooms[index].furnishingsToAdd
+}
                getAllFurnishings={props.getAllFurnishings}
             />
 

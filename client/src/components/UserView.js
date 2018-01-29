@@ -4,9 +4,11 @@ import axios from 'axios'
 import styled from 'styled-components'
 import EditUserForm from './EditUserForm'
 import RoomPage from './RoomPage'
+import FurnishingPage from './FurnishingPage';
 
 const Button = styled.button ` 
-color: turquoise;
+background-color: turquoise;
+color: white;
 font-size: 1em;
 margin: 1em;
 padding: 0.25em 1em;
@@ -14,8 +16,8 @@ border: 2px solid turquoise;
 border-radius: 3px;
     &:hover {
 opacity: 0.8;
-position: relative;
-bottom: 5 px;
+position:relative;
+bottom: 5px;
 }
 
 `;
@@ -34,14 +36,12 @@ class UserView extends Component {
     state = {
         user: {},
         rooms: [],
-        furnishings: [],
         redirect: false
     }
 
     componentWillMount() {
         this.getUserInfo()
         this.getAllRooms()
-
     }
 
     getUserInfo = async() => {
@@ -55,9 +55,9 @@ class UserView extends Component {
         }
     }
 
-    getAllRooms = async () => {
+    getAllRooms = async(userId) => {
         try {
-            const userId = this.props.match.params.userId
+            const userId = this.props.match.params.userId   
             const res = await axios.get(`/api/users/${userId}/rooms`)
             console.log("LOGGING RES", res)
             const rooms = res.data.rooms
@@ -68,19 +68,20 @@ class UserView extends Component {
         }
     }
 
-getAllFurnishings = async (roomId) => {
-try {
-const userId = this.props.match.params.userId
-console.log("YOOOOO",userId, roomId)
-const res = await axios.get(`/api/users/${userId}/rooms/${roomId}/furnishings`)
-const furnishings = res.data
-console.log("HIIIII",furnishings)
-this.setState({furnishings})
-} catch (err) {
-console.log(err)
-}
+    getAllFurnishings = async(roomId) => {
+        try {
+            const userId = this.props.match.params.userId
+            console.log("Getting all furnishings by userId and roomId", userId, roomId)
+            const res = await axios.get(`/api/users/${userId}/rooms/${roomId}/furnishings`)
+            //const furnishings = res.data
 
-}
+            this.setState({furnishings: res.data})
+            console.log("Got furnishing and updated state", this.state.furnishings)
+        } catch (err) {
+            console.log(err)
+        }
+
+    }
 
     //not sure about this code - it works but errors at the end
     banannaDelete = async() => {
@@ -153,8 +154,11 @@ console.log(err)
                 </div>
 
                 <div>
-                    <RoomPage getAllFurnishings={this.getAllFurnishings} furnishings={this.state.furnishings}
-                    rooms={this.state.rooms} userId = {this.props.match.params.userId}/>
+                    <RoomPage
+                        getAllFurnishings={this.getAllFurnishings}
+                        furnishings={this.state.furnishings}
+                        rooms={this.state.rooms}
+                        userId={this.props.match.params.userId}/>
                 </div>
 
             </Body>
