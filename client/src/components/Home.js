@@ -4,7 +4,7 @@ import UserPage from './UserPage'
 import styled from 'styled-components'
 
 const Title = styled.h1 `
-  font-size: 4.5em;
+  font-size: 5.0em;
   text-align: center;
   color: turquoise;
 font-family : 'Indie Flower',
@@ -30,19 +30,50 @@ border-radius: 3px;
 `;
 
 
-const Body = styled.div `
+const ButtonStyle = styled.div `
+display: flex;
+justify-content: center;
+align-items:center;
+`;
+
+
+
+const HomeStyle = styled.div `
 margin: 0;
 padding: 0;
-width: 100%;
-height: 500px;
-background-position: center;
-background-size: cover;
-background-image: url(https://i.imgur.com/79QGY25.jpg);
-background-repeat: no-repeat;
 display: flex;
 justisfy-content: center;
 align-items: center;
+flex-direction: columns;
+background-image: url('https://i.imgur.com/79QGY25.jpg');
+background-position: center;
+background-size: cover;
+height: 100%;
+width: 100%;
 `;
+
+const Wrapper = styled.div`
+ display: flex;
+ flex-direction : column;
+ align-items: center
+ justify-content: center;
+`;
+
+const Image = styled.div`
+img{
+   height: 100%;
+   width: 100%;
+}
+`;
+
+const Words = styled.p `
+font-size:2.0em;
+text-align:center;
+color:black;
+font-family:'Indie Flower',
+cursive;
+`;
+
 
 
 class Home extends Component {
@@ -50,19 +81,20 @@ class Home extends Component {
     render() {
 
         return (
-<Body>
-            
-                
-                    <Title>RoomStyle</Title>
-                
-                <div>
-                    <Button>
-                        <Link to="/users">Designers</Link>
-                    </Button>
-                  </div>
-            
-</Body>
-        )
+<Wrapper>
+            <Title>RoomStyle</Title>
+    
+            <ButtonStyle><Button><Link to="/users">Designers</Link></Button></ButtonStyle> 
+<Words> <p>Let's Create your dream room! Click on the Designers button for inspiration.
+    When you are ready to play, add yourself as a designer, and let the fun begin!</p> 
+    </Words>
+<Image>
+<img src = "https://i.imgur.com/79QGY25.jpg" alt = "living room"/>
+</Image>
+
+
+</Wrapper>
+)
     }
 }
 
