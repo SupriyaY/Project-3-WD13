@@ -4,18 +4,29 @@ import UserPage from './UserPage'
 import styled from 'styled-components'
 
 const Title = styled.h1 `
-  font-size: 3.5em;
+  font-size: 4.5em;
   text-align: center;
   color: turquoise;
+font-family : 'Indie Flower',
+cursive;
 `;
 
 const Button = styled.button ` 
-color: turquoise;
+background-color: turquoise;
+color: white;
 font-size: 1em;
 margin: 1em;
 padding: 0.25em 1em;
 border: 2px solid turquoise;
 border-radius: 3px;
+    a{
+        text-decoration: none;
+    }
+    &: hover{
+    opacity: 0.8;
+    position: relative;
+    margin-top: 10px;
+}
 `;
 
 
@@ -31,14 +42,9 @@ class Home extends Component {
                 </div>
                 <div>
                     <Button>
-                        <Link to="/users">Users</Link>
+                        <Link to="/users">Designers</Link>
                     </Button>
-                    <Button>
-                        <Link to="#">Rooms</Link>
-                    </Button>
-                    <Button>
-                        <Link to="#">Funishings</Link>
-                    </Button>
+                    
                 </div>
             </div>
 

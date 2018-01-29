@@ -37,18 +37,15 @@ align-items: center;
 text-decoration: none;   
 align-items: center;
 justisfy-content: center; 
+font-family: 'Indie Flower',cursive;
+font-size: 1.5em;
     }
 `;
 
-// const Designers = styled.div `
-// display: flex;
-// flex-direction: row;
-// justify-content: center;
-// align-items: center;
-// flex-wrap: wrap;
-// `;
-
-
+const Friends = styled.h1 `
+font-family : 'Indie Flower',cursive;
+font-size: 3.5em;
+`;
 
 
 class UserPage extends Component {
@@ -94,6 +91,10 @@ class UserPage extends Component {
         return (
             <Body>
                 <Holder>
+<div>
+    <a href='/'>Home </a>
+    </div>
+
                 <div>
 
                     <NewUserForm
@@ -106,7 +107,7 @@ class UserPage extends Component {
                         />
                 </div>
                 <div>
-                    <h1>Room Designers</h1>
+                    <Friends>Room Designers</Friends>
                     <UserList users={this.props.users}/>
                 </div>
                 </Holder>

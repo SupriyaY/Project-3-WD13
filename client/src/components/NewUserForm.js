@@ -79,7 +79,7 @@ const NewUserForm = (props) => {
                         type="text"/>
                 </div>
 
-                <Button type="submit">Add Designer</Button>
+                <Button type="submit">Create</Button>
 
             </form>
         </UserAdd>

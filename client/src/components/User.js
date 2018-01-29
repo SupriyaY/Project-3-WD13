@@ -14,8 +14,8 @@ align-items: center;
 margin: 10px;
 padding: 10px;
 img {
- height: 150px;
- width: 150px;
+ height: 170px;
+ width: 170px;
 border-radius: 50%;
 }
 &:hover{
