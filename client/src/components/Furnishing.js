@@ -7,9 +7,11 @@ const Room = (props) => {
     return (
 
         <div>
-           
-        {props.room_name}
-        < FurnishingPage />
+
+            {props.furniture_url}
+            {props.furniture_img}
+            {props.}
+            < FurnishingPage/>
         </div>
 
     )
