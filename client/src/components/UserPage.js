@@ -6,6 +6,8 @@ import axios from 'axios'
 import UserList from './UserList'
 import NewUserForm from './NewUserForm'
 
+
+//Styled Components
 const Button = styled.button ` 
 color: turquoise;
 font-size: 1em;
@@ -24,6 +26,17 @@ background: #FFBC73;
 background: -webkit-linear-gradient(to left, #FF5F6D, #FFC371);
 background: linear-gradient(to left, #FF5F6D, #FFC371);
 `;
+
+const Holder = styled.div `
+display : flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+`;
+
+
+
+
 
 class UserPage extends Component {
 
@@ -67,6 +80,7 @@ class UserPage extends Component {
     render() {
         return (
             <Body>
+                <Holder>
                 <div>
                     <NewUserForm
                         users={this.state.users}
@@ -81,6 +95,7 @@ class UserPage extends Component {
                     <h1>Room Designers</h1>
                     <UserList users={this.props.users}/>
                 </div>
+                </Holder>
             </Body>
         )
     }

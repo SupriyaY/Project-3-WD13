@@ -28,7 +28,7 @@ console.log(err)
 //     const roomId = request.params.roomId
 //     const furnishingId = request.params.furnishingId
 //     const user = await User.findById(userId) 
-//     //response.json(user.rooms.id(roomId))
+//     response.json(user.rooms.id(roomId))
 //         }
 //         catch(error) {
 //             console.log(error)

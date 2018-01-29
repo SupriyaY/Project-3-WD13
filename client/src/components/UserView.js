@@ -67,8 +67,8 @@ try {
 const userId = this.props.match.params.userId
 console.log("YOOOOO",userId, roomId)
 const res = await axios.get(`/api/users/${userId}/rooms/${roomId}/furnishings`)
-const furnishings = res.data.rooms.furnishings
-console.log(furnishings)
+const furnishings = res.data
+console.log("HIIIII",furnishings)
 this.setState({furnishings})
 } catch (err) {
 console.log(err)

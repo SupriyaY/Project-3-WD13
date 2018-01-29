@@ -18,7 +18,7 @@ class Room extends Component {
             <div>
 
                 {this.props.room_name}
-                < FurnishingPage roomId={this.props.roomId}/>
+                < FurnishingPage furnishings={this.props.furnishings} roomId={this.props.roomId}/>
             </div>
 
         )

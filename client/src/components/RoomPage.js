@@ -14,6 +14,7 @@ console.log("logging from the roompage", props.rooms)
         <div>
             <RoomList
             getAllFurnishings = {props.getAllFurnishings}
+            furnishings={props.furnishings}
             userId = {props.userId} 
             room_name = {props.room_name}
             rooms={props.rooms}/>
