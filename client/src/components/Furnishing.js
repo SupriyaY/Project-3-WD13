@@ -3,7 +3,12 @@ import {Redirect, Link} from 'react-router-dom'
 import styled from 'styled-components'
 import FurnishingList from './FurnishingList'
 
-
+const FurnWrapper = styled.div`
+align - items : center
+justisfy content : center
+flex - direction : row;
+padding : 20 px;
+`;
 
 
 
@@ -12,7 +17,7 @@ const Furnishing = (props) => {
 
     return (
 
-        <div>
+        <FurnWrapper>
 
             <a href={props.furniture_url}>Furniture</a> <br />
             {/* <img src={props.furniture_img}/> */}
@@ -21,7 +26,7 @@ const Furnishing = (props) => {
             <a href={props.rug_url}>Rug</a> <br />
             {/* {props.rug_img} */}
            
-        </div>
+        </FurnWrapper>
 
     )
 

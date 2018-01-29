@@ -22,15 +22,31 @@ bottom: 5px;
 
 `;
 
-const Body = styled.div `
-margin:0;
-width:100%;
-height:100%;
-position:relative;
-background:#FFBC73;
-background: -webkit-linear-gradient(to left, #FF5F6D, #FFC371);
-background: linear-gradient(to left, #FF5F6D, #FFC371);
+const Wrapper = styled.div `
+font-family : 'Indie Flower',cursive;
+font-size: 1.0em;
+display: flex;
+align-items: center;
+flex-direction: column;
+justify-content: center;
+    img {
+        height: 170 px;
+        width: 170 px;
+        border-radius: 50%;
+    } &:hover 
+        {opacity: 0.8;
+        position: relative;
+        top: -20 px;}
 `;
+
+const People = styled.div `
+display: flex;
+align-items: center;
+flex-direction: row;
+justify-content: center;
+`;
+
+
 
 class UserView extends Component {
     state = {
@@ -134,13 +150,14 @@ class UserView extends Component {
         }
 
         return (
-            <Body>
+            
+            <Wrapper>
+                
                 <div>
                     <div><img src={this.state.user.photo_url}/></div>
                     <div>username: {this.state.user.username}</div>
                     <div>name: {this.state.user.name}</div>
                     <div>email: {this.state.user.email}</div>
-
                 </div>
 
                 <div>
@@ -150,18 +167,18 @@ class UserView extends Component {
                         handleSubmit={this.handleSubmit}/>
 
                     <Button onClick={this.banannaDelete}>Delete</Button>
-
                 </div>
-
-                <div>
+                
+                <div className ="People">
+                
                     <RoomPage
                         getAllFurnishings={this.getAllFurnishings}
                         furnishings={this.state.furnishings}
                         rooms={this.state.rooms}
                         userId={this.props.match.params.userId}/>
+                        
                 </div>
-
-            </Body>
+            </Wrapper>
         )
 
     }

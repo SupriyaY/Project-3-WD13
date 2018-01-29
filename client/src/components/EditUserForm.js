@@ -10,12 +10,15 @@ import styled from 'styled-components'
 
 const Button = styled.button `  
 background-color:turquoise;
-color:white;
+color: white;
 font-size: 1em;
 margin:1em;
 padding: 0.25em 1em;
 border:2px solid turquoise;
 border-radius:3 px;
+display: flex;
+justisfy-content: center;
+align-items: center;
 &:hover 
 {opacity: 0.8;
     position: relative;
@@ -24,12 +27,31 @@ border-radius:3 px;
 `;
 
 
+const EditForm = styled.div`
+margin: 0 auto;
+display: flex;
+justify-content: flex-end;
+flex - direction:column;
+align-items: center;
+text-align: right;
+padding : 20 px
+color : white;
+font - size : 3 vh
+input {
+    display: flex;
+    align - items: center;
+    width: 120 px;
+    height: 20 px;
+
+    `;
+
 
 
 
 
 
 const EditUserForm = (props) => (
+    <EditForm>
     <form onSubmit={props.handleSubmit}>
         <div>
             <input
@@ -64,6 +86,7 @@ const EditUserForm = (props) => (
             <Button onClick={props.handleSubmit}>Edit</Button>
         </div>
     </form>
+    </EditForm>
 )
 
 export default EditUserForm;
