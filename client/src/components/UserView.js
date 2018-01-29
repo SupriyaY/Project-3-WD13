@@ -61,6 +61,19 @@ class UserView extends Component {
         }
     }
 
+// getAllFurnishings = async () => {
+// try {
+// const userId = this.props.match.params.userId
+// const res = await axios.get(`/api/users/${userId}/rooms/${roomId}furnshings`)
+// const furnishings = res.data.rooms.furnshings
+// console.log(furnishings)
+// this.setState({furnishings})
+// } catch (err) {
+// console.log(err)
+// }
+
+// }
+
     //not sure about this code - it works but errors at the end
     banannaDelete = async() => {
         try {

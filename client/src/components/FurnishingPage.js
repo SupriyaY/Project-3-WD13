@@ -8,7 +8,7 @@ const FurnishingPage = (props) => {
 
     return(
         <div>
-            <FurnishingList
+            {/* <FurnishingList
 userId = {props.userId}
 furniture_url={props.furniture_url} 
 furniture_img= {props.furniture_img}
@@ -17,7 +17,7 @@ light_img={props.light_img}
 rug_url={props.rug_url}
 rug_url={props.rug_img}
 furnishings={props.furnishings}
-/>
+/> */}
         </div>
     )
 

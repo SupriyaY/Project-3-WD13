@@ -12,6 +12,7 @@ const RoomList = (props) => {
            <Room
                 key={index}
                 room_name={props.rooms[index].room_name}
+                roomId={props.rooms[index]._id}
     
             />
 

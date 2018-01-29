@@ -2,6 +2,8 @@ import React from 'react'
 import {Redirect, Link} from 'react-router-dom'
 import styled from 'styled-components'
 import FurnishingPage from './FurnishingPage'
+
+
 const Room = (props) => {
 
     return (
@@ -9,7 +11,7 @@ const Room = (props) => {
         <div>
            
         {props.room_name}
-        < FurnishingPage />
+        < FurnishingPage roomId={props.roomId}/>
         </div>
 
     )
