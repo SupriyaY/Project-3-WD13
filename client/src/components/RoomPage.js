@@ -1,4 +1,4 @@
-import React, {Component} from 'react'
+import React from 'react'
 import {Redirect} from 'react-router-dom'
 import styled from 'styled-components'
 import axios from 'axios'
@@ -8,8 +8,7 @@ import axios from 'axios'
 
 const RoomPage = (props) => {
 
-
-
+console.log("logging from the roompage",props.rooms)
     return(
         <div>
             Hello from Roompage
@@ -20,3 +19,6 @@ const RoomPage = (props) => {
 
 
 export default RoomPage;
+
+
+

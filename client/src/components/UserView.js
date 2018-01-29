@@ -30,10 +30,10 @@ class UserView extends Component {
         rooms: [],
         redirect: false
     }
-    
+
     componentWillMount() {
         this.getUserInfo()
-        this.getAll
+        this.getAllRooms()
 
     }
 
@@ -48,30 +48,28 @@ class UserView extends Component {
         }
     }
 
-    getAllRooms = async() => {
-try{
-const userId = this.props.match.params
-const res = await axios.get(`/api/users/${userId}/rooms`)
-console.log(res.data)
-const rooms = res.data
-this.setState({ rooms })
-}
-catch (err) {
-    console.log(err)
-}
-}
-    
+    getAllRooms = async () => {
+        try {
+            const userId = this.props.match.params.userId
+            const res = await axios.get(`/api/users/${userId}/rooms`)
+            console.log("LOGGING RES", res)
+            const rooms = res.data.rooms
+            console.log(rooms)
+            this.setState({rooms})
+        } catch (err) {
+            console.log(err)
+        }
+    }
 
-
-
-
-//not sure about this code - it works but errors at the end
-banannaDelete = async() => {
+    //not sure about this code - it works but errors at the end
+    banannaDelete = async() => {
         try {
             const {userId} = this.props.match.params
             const res = await axios.delete(`/api/users/${userId}`)
             console.log(res.data)
-            this.props.getAllUsers()
+            this
+                .props
+                .getAllUsers()
             this.setState({redirect: true, user: res.data})
         } catch (err) {
             console.log(err)
@@ -134,8 +132,8 @@ banannaDelete = async() => {
                 </div>
 
                 <div>
-                    <RoomPage />
-                    </div>
+                    <RoomPage rooms={this.state.rooms}/>
+                </div>
 
             </Body>
         )

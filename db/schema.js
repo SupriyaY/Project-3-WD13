@@ -22,7 +22,7 @@ const FurnishingSchema = new Schema({
     },
     light_url: {
         type: String,
-        required: [true, 'Rug is required!']
+        required: [true, 'Light is required!']
     },
     light_img: String
 }, {timestamps: {}})

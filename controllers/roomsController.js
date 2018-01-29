@@ -7,7 +7,7 @@ router.get('/', async(request, response) => {
     try {
         const userId = request.params.userId
         const user = await User.findById(userId)
-        response.json(user.rooms)
+        response.json(user)
     } catch (err) {
         console.log(err)
     }
