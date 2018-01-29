@@ -7,14 +7,18 @@ const UserAdd = styled.div `
 margin: 0 auto;     
 display: flex;     
 justify-content: flex-end;
+flex-direction: column;
 align-items: center;    
 text-align: right;
 padding: 20px
+color: white;
+font-size: 3vh
     input{
         display: flex;
         align-items: center;
-width: 100px;
+width: 120px;
 height: 20px;
+
 `;
 const Button = styled.button `
 background-color: turquoise;
@@ -50,11 +54,9 @@ const NewUserForm = (props) => {
     }
 
     return (
-
         <UserAdd>
-            <h2>Add Designer</h2>
+<h2>Add Designer</h2>
             <form onSubmit={props.handleSubmit}>
-
                 <div>
                     <input
                         value={props.user.name}
@@ -99,7 +101,3 @@ const NewUserForm = (props) => {
 
 export default NewUserForm
 
-// /* Input form styles */     .form - input {     margin: 6 px;     display:
-// flex;     justify - content: flex - end;     align - items: center;     text
-// - align: right; }.form - input label {     /* width: 30vh; */     height : 4
-// vh; }.label {cursor: default;}
