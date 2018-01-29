@@ -1,21 +1,29 @@
-import React from 'react'
+import React, {Component} from 'react'
 import {Redirect, Link} from 'react-router-dom'
 import styled from 'styled-components'
 import FurnishingPage from './FurnishingPage'
 
+class Room extends Component {
 
-const Room = (props) => {
+    componentWillMount() {
+        this.props.getAllFurnishings(this.props.roomId)
+    }
 
-    return (
+    render() {
+    
+    
 
-        <div>
-           
-        {props.room_name}
-        < FurnishingPage roomId={props.roomId}/>
-        </div>
+        return (
 
-    )
+            <div>
 
+                {this.props.room_name}
+                < FurnishingPage roomId={this.props.roomId}/>
+            </div>
+
+        )
+
+    }
 }
 
 export default Room

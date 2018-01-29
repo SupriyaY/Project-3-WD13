@@ -28,6 +28,7 @@ class UserView extends Component {
     state = {
         user: {},
         rooms: [],
+        furnishings: [],
         redirect: false
     }
 
@@ -61,18 +62,19 @@ class UserView extends Component {
         }
     }
 
-// getAllFurnishings = async () => {
-// try {
-// const userId = this.props.match.params.userId
-// const res = await axios.get(`/api/users/${userId}/rooms/${roomId}furnshings`)
-// const furnishings = res.data.rooms.furnshings
-// console.log(furnishings)
-// this.setState({furnishings})
-// } catch (err) {
-// console.log(err)
-// }
+getAllFurnishings = async (roomId) => {
+try {
+const userId = this.props.match.params.userId
+console.log("YOOOOO",userId, roomId)
+const res = await axios.get(`/api/users/${userId}/rooms/${roomId}/furnishings`)
+const furnishings = res.data.rooms.furnishings
+console.log(furnishings)
+this.setState({furnishings})
+} catch (err) {
+console.log(err)
+}
 
-// }
+}
 
     //not sure about this code - it works but errors at the end
     banannaDelete = async() => {
@@ -145,7 +147,7 @@ class UserView extends Component {
                 </div>
 
                 <div>
-                    <RoomPage rooms={this.state.rooms} userId = {this.props.match.params.userId}/>
+                    <RoomPage getAllFurnishings={this.getAllFurnishings} rooms={this.state.rooms} userId = {this.props.match.params.userId}/>
                 </div>
 
             </Body>
