@@ -21,8 +21,7 @@ margin: 10px;
 padding: 10px;
 img {
 border-radius: 50%
-width: 20vw;
-height: 20vh; 
+
 }
 &:hover: {
 opacity: 0.8;
