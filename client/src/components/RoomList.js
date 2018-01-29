@@ -9,7 +9,7 @@ const RoomList = (props) => {
 
  const roomList = props.rooms.map((room, index) => {
         return (
-            <Room
+           <Room
                 key={index}
                 room_name={props.rooms[index].room_name}
     
@@ -18,9 +18,9 @@ const RoomList = (props) => {
         )
     })
 
-    return(
+    return (
         <div>
-            {roomList}
+         {roomList}
         </div>
     )
 

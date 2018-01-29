@@ -12,10 +12,10 @@ const RoomPage = (props) => {
 console.log("logging from the roompage", props.rooms)
     return (
         <div>
-            (<RoomList
+            <RoomList
             userId = {props.userId} 
             room_name = {props.room_name}
-            rooms={props.rooms}/>)
+            rooms={props.rooms}/>
         </div>
     )
     

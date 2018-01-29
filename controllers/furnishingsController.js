@@ -4,15 +4,15 @@ const User = require('../db/models/User')
 
 
 //Index
-// router.get('/', async (request, response) => {
-// try{
-// const room = await Room.findbyId(request.params.roomId)
-// const showFurnishing = room.furnishing
-// response.json(showFurnishing)
-// } catch (err) {
-// console.log(err)
-// }
-// })
+router.get('/', async (request, response) => {
+try{
+const room = await Room.findbyId(request.params.roomId)
+const showFurnishing = room.furnishing
+response.json(showFurnishing)
+} catch (err) {
+console.log(err)
+}
+})
 
 
 
