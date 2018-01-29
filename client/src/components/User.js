@@ -21,15 +21,20 @@ margin: 10px;
 padding: 10px;
 img {
 border-radius: 50%
-
 }
-&:hover: {
+&:hover{
 opacity: 0.8;
 position: relative;
-top: -20 px;
+top: -20px;
 }
 `;
 
+const Friends = styled.div `
+display: flex;
+justisfy-content: center;
+text-decoration: none;
+
+`;
 
 
 class User extends Component {
@@ -38,11 +43,16 @@ class User extends Component {
 
         return (
             <Link to={`/users/${this.props._id}`}>
+            <div>
             <UserPicture>
                 <div><img src={this.props.photo_url}/></div>
                 </UserPicture>
-               <div>{this.props.name}</div>
-            
+                </div>
+            <div>
+        <Friends>
+               {this.props.name}
+               </Friends>
+               </div>
             </Link>
 
         )
