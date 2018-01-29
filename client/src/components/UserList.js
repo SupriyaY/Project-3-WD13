@@ -1,6 +1,16 @@
 import React, {Component} from 'react'
 import {Redirect} from 'react-router-dom'
 import User from './User'
+import styled from 'styled-components'
+
+const Designers = styled.div `
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+flex-wrap: wrap;
+`;
+
 
 class UserList extends Component {
 
@@ -18,8 +28,9 @@ class UserList extends Component {
         return (
 
             <div>
+                <Designers>
                 {userComponents}
-       
+       </Designers>
             </div>
 
         )

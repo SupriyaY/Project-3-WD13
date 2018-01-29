@@ -147,7 +147,8 @@ console.log(err)
                 </div>
 
                 <div>
-                    <RoomPage getAllFurnishings={this.getAllFurnishings} rooms={this.state.rooms} userId = {this.props.match.params.userId}/>
+                    <RoomPage getAllFurnishings={this.getAllFurnishings} furnishings={this.state.furnishings}
+                    rooms={this.state.rooms} userId = {this.props.match.params.userId}/>
                 </div>
 
             </Body>

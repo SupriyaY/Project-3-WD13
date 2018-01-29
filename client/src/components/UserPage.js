@@ -34,6 +34,13 @@ justify-content: center;
 align-items: center;
 `;
 
+// const Designers = styled.div `
+// display: flex;
+// flex-direction: row;
+// justify-content: center;
+// align-items: center;
+// flex-wrap: wrap;
+// `;
 
 
 
