@@ -1,3 +1,31 @@
-import React, {Component} from 'react'
-import {Redirect} from 'react-router-dom'
+import React from 'react'
+import {Redirect, Link} from 'react-router-dom'
 import styled from 'styled-components'
+import Room from './Room'
+
+
+
+const RoomList = (props) => {
+
+ const roomList = props.rooms.map((room, index) => {
+        return (
+            <Room
+                key={index}
+                room_name={props.rooms[index].room_name}
+    
+            />
+
+        )
+    })
+
+    return(
+        <div>
+            {roomList}
+        </div>
+    )
+
+}
+
+
+
+export default RoomList;

@@ -28,7 +28,8 @@ User
     .then(() => {
         const ared = new User({
         username: 'AReddick', 
-        name: 'Ayana Reddick', email: 'areddick@gmail.com', 
+        name: 'Ayana Reddick', 
+        email: 'areddick@gmail.com', 
         photo_url: 'https://i.imgur.com/E2kISO8.png?1'})
 
         const bedone = new Room({room_name: 'Bedroom'})

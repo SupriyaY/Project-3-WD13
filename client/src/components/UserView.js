@@ -132,7 +132,7 @@ class UserView extends Component {
                 </div>
 
                 <div>
-                    <RoomPage rooms={this.state.rooms}/>
+                    <RoomPage rooms={this.state.rooms} userId = {this.props.match.params.userId}/>
                 </div>
 
             </Body>
