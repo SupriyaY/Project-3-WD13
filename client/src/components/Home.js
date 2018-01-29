@@ -30,24 +30,38 @@ border-radius: 3px;
 `;
 
 
+const Body = styled.div `
+margin: 0;
+padding: 0;
+width: 100%;
+height: 500px;
+background-position: center;
+background-size: cover;
+background-image: url(https://i.imgur.com/79QGY25.jpg);
+background-repeat: no-repeat;
+display: flex;
+justisfy-content: center;
+align-items: center;
+`;
+
+
 class Home extends Component {
 
     render() {
 
         return (
-
-            <div>
-                <div>
+<Body>
+            
+                
                     <Title>RoomStyle</Title>
-                </div>
+                
                 <div>
                     <Button>
                         <Link to="/users">Designers</Link>
                     </Button>
-                    
-                </div>
-            </div>
-
+                  </div>
+            
+</Body>
         )
     }
 }

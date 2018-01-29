@@ -6,9 +6,9 @@ import styled from 'styled-components'
 const UserAdd = styled.div `
 margin: 0 auto;     
 display: flex;     
-justify - content: flex - end;
-align - items: center;    
-text - align: right;
+justify-content: flex-end;
+align-items: center;    
+text-align: right;
 padding: 20px
     input{
         display: flex;
@@ -29,8 +29,19 @@ border-radius : 3px;
     position: relative;
     bottom: -5px;
     }
-
  `;
+
+
+ //trying something out from code.io const
+// const UserAdd = styled.div ` 
+// overflow: hidden; 
+// padding: 0 0 32 px; 
+// margin: 48px auto 0; 
+// width: 300px;
+// font-family: Quicksand,arial,sans - serif; 
+// box-shadow: 0 0 20 px rgba(0, 0,0, .05),0 0 px 40 px rgba(0, 0, 0, .08); 
+// border-radius: 5 px; 
+//  `;
 
 const NewUserForm = (props) => {
 

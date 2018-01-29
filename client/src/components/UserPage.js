@@ -6,7 +6,6 @@ import axios from 'axios'
 import UserList from './UserList'
 import NewUserForm from './NewUserForm'
 
-
 //Styled Components
 const Button = styled.button ` 
 color: turquoise;
@@ -47,6 +46,17 @@ font-family : 'Indie Flower',cursive;
 font-size: 3.5em;
 `;
 
+//trying something out from code.io
+// const CardStyling = styled.div`
+// overflow: hidden;
+// padding: 0 0 32 px;
+// margin: 48px auto 0;
+// width: 300px;
+// font-family: Quicksand,arial,sans - serif;
+// box-shadow: 0 0 20 px rgba(0, 0, 0, .05),0 0 px 40 px rgba(0, 0, 0, .08);
+// border-radius: 5 px;
+// `;
+
 
 class UserPage extends Component {
 
@@ -75,7 +85,9 @@ class UserPage extends Component {
         console.log('about to post', letsbuy)
         const res = await axios.post('/api/users', letsbuy)
         console.log('posted')
-        this.props.getAllUsers()
+        this
+            .props
+            .getAllUsers()
 
     }
 
@@ -91,30 +103,28 @@ class UserPage extends Component {
         return (
             <Body>
                 <Holder>
-<div>
-    <a href='/'>Home </a>
-    </div>
+                    <div>
+                        <a href='/'>Home
+                        </a>
+                    </div>
 
-                <div>
-
-                    <NewUserForm
-                        users={this.state.users}
-                        user={this.state.newUser}
-                        id={this.state.newUserId}
-                        redirect={this.state.redirect}
-                        handleChange={this.handleChange}
-                        handleSubmit={this.handleSubmit}
-                        />
-                </div>
-                <div>
-                    <Friends>Room Designers</Friends>
-                    <UserList users={this.props.users}/>
-                </div>
+                    <div>
+                        
+                            <NewUserForm
+                                users={this.state.users}
+                                user={this.state.newUser}
+                                id={this.state.newUserId}
+                                redirect={this.state.redirect}
+                                handleChange={this.handleChange}
+                                handleSubmit={this.handleSubmit}/>
+                    </div>
+                    <div>
+                        <Friends>Room Designers</Friends>
+                        <UserList users={this.props.users}/>
+                    </div>
                 </Holder>
             </Body>
-        )
+
+        )}
     }
-
-}
-
 export default UserPage;
