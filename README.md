@@ -15,7 +15,7 @@ RoomStyle
 * Project Planning and User Stories  - [Trello](https://trello.com/b/5ANT9tS0/project-3-roomstyle)
 * React
 
-## Wireframes and ERD
+## ERD and Wireframes
 
 Figma was the tool used to design the prototype for the application.
 
