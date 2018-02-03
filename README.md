@@ -19,9 +19,9 @@ RoomStyle
 
 Figma was the tool used to design the prototype for the application.
 
-![ERD]()
+![ERD](https://github.com/SupriyaY/Project-3-WD13/blob/master/Screen%20Shot%202018-02-03%20at%203.01.28%20AM.png)
 
-![Wireframe]()
+![Wireframe](https://github.com/SupriyaY/Project-3-WD13/blob/master/IMG_0850.jpg)
 
 ## Features
 
