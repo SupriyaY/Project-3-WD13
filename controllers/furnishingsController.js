@@ -21,22 +21,9 @@ console.log(err)
 
 
 
-//SHOW all furnishings
-// router.get('/:furnishingId', async (request, response) => {
-//     try {
-//     const userId = request.params.userId
-//     const roomId = request.params.roomId
-//     const furnishingId = request.params.furnishingId
-//     const user = await User.findById(userId) 
-//     response.json(user.rooms.id(roomId))
-//         }
-//         catch(error) {
-//             console.log(error)
-//         }
-// })
 
 
-module.exports = router 
+
 
 
 

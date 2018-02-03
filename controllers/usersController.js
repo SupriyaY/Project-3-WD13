@@ -16,10 +16,7 @@ router.get('/', (request, response) => {
 
 
 
-///NEW USER
-// router.get('/new', (request, response) => {
-//     response.json(){pageTitle: 'New User'})
-// })
+
 router.post('/', (request, response) => {
     console.log('posting new user', request.body)
     const newUser = request.body

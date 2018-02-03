@@ -7,8 +7,7 @@ const Title = styled.h1 `
   font-size: 5.0em;
   text-align: center;
   color: black;
-font-family : 'Indie Flower',
-cursive;
+ font-family:'Saira Semi Condensed ', sans-serif;
 `;
 
 const Button = styled.button ` 
@@ -22,21 +21,13 @@ border-radius: 3px;
     a{
         text-decoration: none;
     }
-    &: hover{
-    opacity: 0.8;
-    position: relative;
-    margin-top: 10px;
-}
 `;
-
 
 const ButtonStyle = styled.div `
 display: flex;
 justify-content: center;
 align-items:center;
 `;
-
-
 
 const HomeStyle = styled.div `
 margin: 0;
@@ -52,14 +43,14 @@ height: 100%;
 width: 100%;
 `;
 
-const Wrapper = styled.div`
+const Wrapper = styled.div `
  display: flex;
  flex-direction : column;
  align-items: center
  justify-content: center;
 `;
 
-const Image = styled.div`
+const Image = styled.div `
 img{
    height: 100%;
    width: 100%;
@@ -67,34 +58,28 @@ img{
 }
 `;
 
-const Words = styled.p `
-font-size:2.0em;
-text-align:center;
-color:black;
-font-family:'Indie Flower',
-cursive;
-`;
-
-
-
 class Home extends Component {
 
     render() {
 
         return (
-<Wrapper>
-            <Title>RoomStyle</Title>
-    
-            <ButtonStyle><Button><Link to="/users">Designers</Link></Button></ButtonStyle> 
-<div>
-<Image>
- <img src = "https://i.imgur.com/79QGY25.jpg" alt = "living room"/>
-</Image>
-</div>
+            <Wrapper>
+                <Title>RoomStyle</Title>
+                <div>
+                    <ButtonStyle>
+                        <Button>
+                            <Link to="/users">Designers</Link>
+                        </Button>
+                    </ButtonStyle>
+                </div>
+                <div>
+                    <Image>
+                        <img src="https://i.imgur.com/79QGY25.jpg" alt="living room"/>
+                    </Image>
+                </div>
 
-
-</Wrapper>
-)
+            </Wrapper>
+        )
     }
 }
 
