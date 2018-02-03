@@ -38,8 +38,7 @@ font-family : 'Indie Flower',cursive;
 font-size: 3.5em;
 `;
 
-
-const Nav = styled.div`
+const Nav = styled.div `
 align-items: flex-start;
 padding: 15px;
 margin-bottom : 20px;
@@ -52,18 +51,10 @@ a {
 }
 `;
 
-
-//trying something out from code.io
-// const CardStyling = styled.div`
-// overflow: hidden;
-// padding: 0 0 32 px;
-// margin: 48px auto 0;
-// width: 300px;
-// font-family: Quicksand,arial,sans - serif;
-// box-shadow: 0 0 20 px rgba(0, 0, 0, .05),0 0 px 40 px rgba(0, 0, 0, .08);
-// border-radius: 5 px;
-// `;
-
+// trying something out from code.io const CardStyling = styled.div` overflow:
+// hidden; padding: 0 0 32 px; margin: 48px auto 0; width: 300px; font-family:
+// Quicksand,arial,sans - serif; box-shadow: 0 0 20 px rgba(0, 0, 0, .05),0 0 px
+// 40 px rgba(0, 0, 0, .08); border-radius: 5 px; `;
 
 class UserPage extends Component {
 
@@ -109,21 +100,21 @@ class UserPage extends Component {
     render() {
         return (
             <Body>
-                
-                    <Nav>
-                        <a href='/'>Home
-                        </a>
-                    </Nav>
-<Holder>
+
+                <Nav>
+                    <a href='/'>Home
+                    </a>
+                </Nav>
+                <Holder>
                     <div>
-                        
-                            <NewUserForm
-                                users={this.state.users}
-                                user={this.state.newUser}
-                                id={this.state.newUserId}
-                                redirect={this.state.redirect}
-                                handleChange={this.handleChange}
-                                handleSubmit={this.handleSubmit}/>
+
+                        <NewUserForm
+                            users={this.state.users}
+                            user={this.state.newUser}
+                            id={this.state.newUserId}
+                            redirect={this.state.redirect}
+                            handleChange={this.handleChange}
+                            handleSubmit={this.handleSubmit}/>
                     </div>
                     <div>
                         <Friends>Room Designers</Friends>
@@ -132,6 +123,7 @@ class UserPage extends Component {
                 </Holder>
             </Body>
 
-        )}
+        )
     }
+}
 export default UserPage;

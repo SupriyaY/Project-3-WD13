@@ -59,13 +59,13 @@ const Wrapper = styled.div`
  justify-content: center;
 `;
 
-// const Image = styled.div`
-// img{
-//    height: 100%;
-//    width: 100%;
-//    opacity: .4
-// }
-// `;
+const Image = styled.div`
+img{
+   height: 100%;
+   width: 100%;
+   opacity: .4
+}
+`;
 
 const Words = styled.p `
 font-size:2.0em;
@@ -86,12 +86,11 @@ class Home extends Component {
             <Title>RoomStyle</Title>
     
             <ButtonStyle><Button><Link to="/users">Designers</Link></Button></ButtonStyle> 
-<Words> <p>Let's Create your dream room! Click on the Designers button for inspiration.
-    When you are ready to play, add yourself as a designer, and let the fun begin!</p> 
-    </Words>
-{/* <Image>
-<img src = "https://i.imgur.com/79QGY25.jpg" alt = "living room"/>
-</Image> */}
+<div>
+<Image>
+ <img src = "https://i.imgur.com/79QGY25.jpg" alt = "living room"/>
+</Image>
+</div>
 
 
 </Wrapper>
