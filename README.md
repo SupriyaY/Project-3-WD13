@@ -6,7 +6,7 @@ RoomStyle
 
 ## Link to Heroku
 
-(RoomStyle)https://stark-wave-84398.herokuapp.com
+[RoomStyle]https://stark-wave-84398.herokuapp.com
 
 ## Technology Used
 
