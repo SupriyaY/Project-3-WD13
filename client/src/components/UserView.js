@@ -169,18 +169,19 @@ class UserView extends Component {
             <Nav>
 <a href ='/'> Home &hearts;
 </a> 
-< a href='/users '>Designers 
+< a href='/users'>Designers 
  </a>
                 </Nav>
             <Wrapper>
  
                 <div>
                     <div><img src={this.state.user.photo_url}/></div>
-                    <div>username: {this.state.user.username}</div>
-                    <div>name: {this.state.user.name}</div>
-                    <div>email: {this.state.user.email}</div>
-                </div>
-
+                    <div>{this.state.user.username}</div>
+                    <div>{this.state.user.name}</div>
+                    <div>{this.state.user.email}</div>
+      <div>          </div>
+<p>Update Designer Info</p>
+</div>
                 <div>
                     <EditUserForm
                         user={this.state.user}
