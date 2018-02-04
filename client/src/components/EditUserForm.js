@@ -31,23 +31,25 @@ const EditForm = styled.div`
 margin: 0 auto;
 display: flex;
 justify-content: flex-end;
-flex - direction:column;
+flex-direction:column;
 align-items: center;
 text-align: right;
-padding : 20 px
-color : white;
-font - size : 3 vh
+padding: 20px
+color: white;
+font-size: 3vh
+
 input {
     display: flex;
-    align - items: center;
+    align-items: center;
     width: 120 px;
     height: 20 px;
-
+};
+img {
+height:170 px;
+width:170 px;
+border-radius: 50%;
+    };
     `;
-
-
-
-
 
 
 const EditUserForm = (props) => (

@@ -4,10 +4,10 @@ import UserPage from './UserPage'
 import styled from 'styled-components'
 
 const Title = styled.h1 `
-  font-size: 5.0em;
+  font-size: 4.0em;
   text-align: center;
   color: black;
- font-family:'Saira Semi Condensed ', sans-serif;
+ font-family:'Saira Semi Condensed', sans-serif;
 `;
 
 const Button = styled.button ` 

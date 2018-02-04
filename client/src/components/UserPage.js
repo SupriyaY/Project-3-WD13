@@ -34,7 +34,7 @@ align-items: center;
  `;
 
 const Friends = styled.h1 `
-font-family : 'Indie Flower',cursive;
+font-family:'Saira Semi Condensed', sans-serif;
 font-size: 3.5em;
 `;
 

@@ -8,10 +8,6 @@ import FurnishingPage from './FurnishingPage';
 
 
 
-
-
-
-
 const Button = styled.button ` 
 background-color: turquoise;
 color: white;
