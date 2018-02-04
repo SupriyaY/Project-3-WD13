@@ -63,7 +63,8 @@ const NewUserForm = (props) => {
                         type="text"
                         placeholder="Name"
                         onChange={(e) => props.handleChange(e)}
-                        name="name"/>
+                        name="name"
+                        required/>
                 </div>
 
                 <div>
@@ -72,7 +73,8 @@ const NewUserForm = (props) => {
                         type="text"
                         placeholder="Username"
                         onChange={(e) => props.handleChange(e)}
-                        name="username"/>
+                        name="username"
+                        required/>
                 </div>
 
                 <div>
