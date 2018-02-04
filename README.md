@@ -2,7 +2,7 @@
 
 ## Overview
 
-RoomStyle
+I created an app to organize all of your home decoration ideas by rooms in your home. 
 
 ## Link to Heroku
 
@@ -37,3 +37,4 @@ Figma was the tool used to design the prototype for the application.
 * DRY code
 * Adding more models
 * Learning and using tools to make design easier - Materialize, Bootstrap, etc.
+* Better origanization of CSS and code 
