@@ -2,9 +2,7 @@ import React, {Component} from 'react';
 import {Link} from 'react-router-dom'
 import styled from 'styled-components'
 
-// Styled Components const Designers = styled.div ` display: flex;
-// flex-direction: row; justify-content: center; align-items: center; flex-wrap:
-// wrap; `;
+
 
 const UserPicture = styled.div `
 display: flex;

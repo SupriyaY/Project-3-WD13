@@ -59,7 +59,3 @@ const userView = (props) => (<UserView users={this.state.users} getAllUsers={thi
 
 export default App
 
-// < Router > <Switch>   <Route exact path="/" component={Home}/>   <Route exact
-// path="/users" render={UsersComponent}/>   <Route exact path="/users/:userid"
-// render={UsersComponent}/>   <Route exact path="/users/:userid/rooms"
-// render={UsersComponent}/> </Switch> < /Router>

@@ -46,8 +46,8 @@ a {
     text-decoration: none;
     align-items: left;
     justisfy-content: left;
-    font-family: 'Indie Flower', cursive;
-    font-size: 2.5em;
+    font-family: 'Saira Semi Condensed ', sans-serif;
+    font-size: 1.5em;
 }
 `;
 
@@ -102,7 +102,7 @@ class UserPage extends Component {
             <Body>
 
                 <Nav>
-                    <a href='/'>Home
+                    <a href='/'>Home &hearts;
                     </a>
                 </Nav>
                 <Holder>

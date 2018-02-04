@@ -6,6 +6,12 @@ import EditUserForm from './EditUserForm'
 import RoomPage from './RoomPage'
 import FurnishingPage from './FurnishingPage';
 
+
+
+
+
+
+
 const Button = styled.button ` 
 background-color: turquoise;
 color: white;
@@ -44,6 +50,19 @@ display: flex;
 align-items: center;
 flex-direction: row;
 justify-content: center;
+`;
+
+const Nav = styled.div `
+align-items: flex-start;
+padding: 15px;
+margin-bottom : 20px;
+a {
+    text-decoration: none;
+    align-items: left;
+    justisfy-content: left;
+    font-family:'Saira Semi Condensed', sans-serif;
+    font-size: 1.5em;
+}
 `;
 
 
@@ -150,9 +169,15 @@ class UserView extends Component {
         }
 
         return (
-            
+            <div>
+            <Nav>
+<a href ='/'> Home &hearts;
+</a> 
+< a href='/users '>Designers 
+ </a>
+                </Nav>
             <Wrapper>
-                
+ 
                 <div>
                     <div><img src={this.state.user.photo_url}/></div>
                     <div>username: {this.state.user.username}</div>
@@ -179,6 +204,7 @@ class UserView extends Component {
                         
                 </div>
             </Wrapper>
+            </div>
         )
 
     }
