@@ -4,12 +4,9 @@ body {
   font-family: sans-serif;
 min-height:100%;
 background-size: cover;
-background-color: white;
-/* background:#FFBC73;
+background-image: linear-gradient(transparent 50%, white),url(https://i.imgur.com/79QGY25.jpg);
 background-repeat: no-repeat;
-background: -webkit-linear-gradient(to left, #FF5F6D, #FFC371);
-background: linear-gradient(to left, #FF5F6D, #FFC371);
-z-index:-999 */
+z-index:-999;
 }
 
 html {

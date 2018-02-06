@@ -49,14 +49,18 @@ justify-content: center;
 `;
 
 const Nav = styled.div `
-align-items: flex-start;
 padding: 15px;
 margin-bottom : 20px;
+width: 100vw;
+height: 5vh;
+display: flex;
+justify-content: flex-end;
+/* align-items: center; */
+/* position: fixed; */
+background: linear-gradient(to right, #C4E0E5, #4CA1AF);/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 a {
     text-decoration: none;
-    align-items: left;
-    justisfy-content: left;
-    font-family:'Saira Semi Condensed', sans-serif;
+    font-family: 'Saira Semi Condensed ', sans-serif;
     font-size: 1.5em;
 }
 `;

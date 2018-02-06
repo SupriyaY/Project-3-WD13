@@ -3,12 +3,7 @@ import {Link} from 'react-router-dom'
 import UserPage from './UserPage'
 import styled from 'styled-components'
 
-const Title = styled.h1 `
-  font-size: 4.0em;
-  text-align: center;
-  color: black;
- font-family:'Saira Semi Condensed', sans-serif;
-`;
+
 
 const Button = styled.button ` 
 background-color: turquoise;
@@ -23,11 +18,7 @@ border-radius: 3px;
     }
 `;
 
-const ButtonStyle = styled.div `
-display: flex;
-justify-content: center;
-align-items:center;
-`;
+
 
 const HomeStyle = styled.div `
 margin: 0;
@@ -35,7 +26,7 @@ padding: 0;
 display: flex;
 justisfy-content: center;
 align-items: center;
-flex-direction: columns;
+flex-direction: column;
 background-image: url('https://i.imgur.com/79QGY25.jpg');
 background-position: center;
 background-size: cover;
@@ -50,35 +41,52 @@ const Wrapper = styled.div `
  justify-content: center;
 `;
 
-const Image = styled.div `
-img{
-   height: 100%;
-   width: 100%;
-   opacity: .4
+// const Image = styled.div `
+// img{
+//    height: 100%;
+//    width: 100%;
+//    opacity: .4
+// }
+// `;
+const Nav = styled.div `
+padding: 15px;
+margin-bottom : 20px;
+width: 100vw;
+height: 5vh;
+display: flex;
+justify-content: flex-end;
+/* align-items: center; */
+/* position: fixed; */
+background: linear-gradient(to right, #C4E0E5, #4CA1AF);/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+position: fixed;
+
+a {
+    text-decoration: none;
+    font-family: 'Saira Semi Condensed ', sans-serif;
+    font-size: 1.5em;
 }
 `;
+
+
 
 class Home extends Component {
 
     render() {
 
         return (
-            <Wrapper>
-                <Title>RoomStyle</Title>
-                <div>
-                    <ButtonStyle>
-                        <Button>
-                            <Link to="/users">Designers</Link>
-                        </Button>
-                    </ButtonStyle>
-                </div>
+            <div>
+            <Nav>
+<a href="/users">Designers</a>
+                </Nav>
+            {/* <Wrapper>
                 <div>
                     <Image>
                         <img src="https://i.imgur.com/79QGY25.jpg" alt="living room"/>
                     </Image>
                 </div>
 
-            </Wrapper>
+            </Wrapper> */}
+            </div>
         )
     }
 }
