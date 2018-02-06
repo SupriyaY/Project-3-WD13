@@ -84,10 +84,11 @@ const EditUserForm = (props) => (
                 type="text"/>
         </div>
 
-        <div>
-            <Button onClick={props.handleSubmit}>Edit</Button>
-        </div>
+      
     </form>
+<div><Button onClick={props.handleSubmit}>Edit</Button></div>
+
+
     </EditForm>
 )
 

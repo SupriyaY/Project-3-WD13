@@ -4,10 +4,10 @@ import styled from 'styled-components'
 import FurnishingList from './FurnishingList'
 
 const FurnWrapper = styled.div`
-align - items : center
-justisfy content : center
-flex - direction : row;
-padding : 20 px;
+align-items: center;
+justisfy-content: center;
+flex-direction: row;
+padding: 20 px;
 `;
 
 

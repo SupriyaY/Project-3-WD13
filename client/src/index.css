@@ -4,15 +4,17 @@ body {
   font-family: sans-serif;
 min-height:100%;
 background-size: cover;
-background:#FFBC73;
+background-color: white;
+/* background:#FFBC73;
 background-repeat: no-repeat;
 background: -webkit-linear-gradient(to left, #FF5F6D, #FFC371);
 background: linear-gradient(to left, #FF5F6D, #FFC371);
-z-index:-999
+z-index:-999 */
 }
 
 html {
   min-height: 100%
+
 }
 
 

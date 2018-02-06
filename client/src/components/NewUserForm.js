@@ -10,8 +10,8 @@ justify-content: flex-end;
 flex-direction: column;
 align-items: center;    
 text-align: right;
-padding: 20px
-color: white;
+padding: 20px;
+color: black;
 font-size: 3vh
     input {
     display: flex;

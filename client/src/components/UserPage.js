@@ -21,9 +21,10 @@ margin: 0;
 width: 100%;
 height: 100%;
 position: relative;
-background: #FFBC73;
+/* background: #FFBC73;
 background: -webkit-linear-gradient(to left, #FF5F6D, #FFC371);
-background: linear-gradient(to left, #FF5F6D, #FFC371);
+background: linear-gradient(to left, #FF5F6D, #FFC371); */
+background-color: white;
 `;
 
 const Holder = styled.div `
@@ -42,6 +43,12 @@ const Nav = styled.div `
 align-items: flex-start;
 padding: 15px;
 margin-bottom : 20px;
+width: 100 vw;
+height: 10 vh;
+background: #9CECFB;/* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #0052D4, #65C7F7, #9CECFB);/* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #0052D4, #65C7F7, #9CECFB);/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 a {
     text-decoration: none;
     align-items: left;
