@@ -16,16 +16,16 @@ border: 2px solid turquoise;
 border-radius: 3px;
 `;
 
-const Body = styled.div `
-margin: 0;
-width: 100%;
-height: 100%;
-position: relative;
-/* background: #FFBC73;
-background: -webkit-linear-gradient(to left, #FF5F6D, #FFC371);
-background: linear-gradient(to left, #FF5F6D, #FFC371); */
-background-color: white;
-`;
+// const Body = styled.div `
+// margin: 0;
+// width: 100%;
+// height: 100%;
+// position: relative;
+// /* background: #FFBC73;
+// background: -webkit-linear-gradient(to left, #FF5F6D, #FFC371);
+// background: linear-gradient(to left, #FF5F6D, #FFC371); */
+// background-color: white;
+// `;
 
 const Holder = styled.div `
 display: flex;
@@ -40,8 +40,8 @@ font-size: 3.5em;
 `;
 
 const Nav = styled.div `
-padding: 15px;
-margin-bottom : 20px;
+padding: 20px;
+margin-bottom: 20px;
 width: 100vw;
 height: 5vh;
 display: flex;
@@ -50,10 +50,18 @@ justify-content: flex-end;
 /* position: fixed; */
 background: linear-gradient(to right, #C4E0E5, #4CA1AF);/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 a {
-    text-decoration: none;
-    font-family: 'Saira Semi Condensed ', sans-serif;
-    font-size: 1.5em;
+     text-decoration: none;
+    font-size: 1.0em;
+    margin-right: 30px;
+    margin-top: 20px;
+    font-family: 'Raleway', sans-serif;
+
+        :hover {
+    color: #fff;
 }
+}
+
+
 `;
 
 // trying something out from code.io const CardStyling = styled.div` overflow:
@@ -104,10 +112,11 @@ class UserPage extends Component {
 
     render() {
         return (
-            <Body>
-
+<div>
                 <Nav>
-                    <a href='/'>Home &hearts;
+                    <a href='/'>HOME
+                    </a>
+                    <a href='/users'>DESIGNERS
                     </a>
                 </Nav>
                 <Holder>
@@ -126,8 +135,10 @@ class UserPage extends Component {
                         <UserList users={this.props.users}/>
                     </div>
                 </Holder>
-            </Body>
+                {/* <Footer>
 
+                    </Footer> */}
+</div>
         )
     }
 }

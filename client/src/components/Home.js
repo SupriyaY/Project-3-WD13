@@ -48,9 +48,9 @@ const Wrapper = styled.div `
 //    opacity: .4
 // }
 // `;
-const Nav = styled.div `
-padding: 15px;
-margin-bottom : 20px;
+const Nav = styled.div`
+padding: 20px;
+margin-bottom: 20px;
 width: 100vw;
 height: 5vh;
 display: flex;
@@ -62,11 +62,24 @@ position: fixed;
 
 a {
     text-decoration: none;
-    font-family: 'Saira Semi Condensed ', sans-serif;
-    font-size: 1.5em;
+    font-size: 1.0em;
+    margin-right: 50px;
+    margin-top: 20px;
+    font-family: 'Raleway', sans-serif;
+
+    :hover {
+    color: #fff;
 }
+}    
 `;
 
+const Footer = styled.div`
+/* padding: 20px;
+margin-bottom: 20px;  */
+width: 100vw;
+height: 10vh;
+background: linear-gradient(to right, #C4E0E5, #4CA1AF);
+`;
 
 
 class Home extends Component {
@@ -76,7 +89,7 @@ class Home extends Component {
         return (
             <div>
             <Nav>
-<a href="/users">Designers</a>
+<a href="/users">DESIGNERS</a>
                 </Nav>
             {/* <Wrapper>
                 <div>
@@ -85,8 +98,11 @@ class Home extends Component {
                     </Image>
                 </div>
 
-            </Wrapper> */}
-            </div>
+            </Wrapper> */}  
+                <Footer>  
+            </Footer>         
+  </div>
+        
         )
     }
 }
