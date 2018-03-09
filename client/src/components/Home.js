@@ -1,22 +1,11 @@
 import React, {Component} from 'react'
 import {Link} from 'react-router-dom'
-import UserPage from './UserPage'
+// import UserPage from './UserPage'
 import styled from 'styled-components'
 
 
 
-const Button = styled.button ` 
-background-color: turquoise;
-color: white;
-font-size: 1em;
-margin: 1em;
-padding: 0.25em 1em;
-border: 2px solid turquoise;
-border-radius: 3px;
-    a{
-        text-decoration: none;
-    }
-`;
+
 
 
 
@@ -24,7 +13,7 @@ const HomeStyle = styled.div `
 margin: 0;
 padding: 0;
 display: flex;
-justisfy-content: center;
+justify-content: center;
 align-items: center;
 flex-direction: column;
 background-image: url('https://i.imgur.com/79QGY25.jpg');
@@ -37,24 +26,18 @@ width: 100%;
 const Wrapper = styled.div `
  display: flex;
  flex-direction : column;
- align-items: center
+ align-items: center;
  justify-content: center;
 `;
 
-// const Image = styled.div `
-// img{
-//    height: 100%;
-//    width: 100%;
-//    opacity: .4
-// }
-// `;
+
 const Nav = styled.div`
 padding: 20px;
 margin-bottom: 20px;
 width: 100vw;
 height: 5vh;
 display: flex;
-justify-content: flex-end;
+justify-content: space-between;
 /* align-items: center; */
 /* position: fixed; */
 background: linear-gradient(to right, #C4E0E5, #4CA1AF);/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
@@ -66,10 +49,14 @@ a {
     margin-right: 50px;
     margin-top: 20px;
     font-family: 'Raleway', sans-serif;
-
+    color: black;
     :hover {
     color: #fff;
 }
+
+
+
+
 }    
 `;
 
@@ -89,7 +76,8 @@ class Home extends Component {
         return (
             <div>
             <Nav>
-<a href="/users">DESIGNERS</a>
+<Link to="/users">DESIGNERS</Link>
+
                 </Nav>
             {/* <Wrapper>
                 <div>

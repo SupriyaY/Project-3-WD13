@@ -5,8 +5,8 @@ import FurnishingPage from './FurnishingPage'
 
 
 const RoomWrapper = styled.div `
-align-items: center
-justisfy content: center
+align-items: center;
+justify-content: center;
 flex-direction: row;
 padding: 20 px;
 `;

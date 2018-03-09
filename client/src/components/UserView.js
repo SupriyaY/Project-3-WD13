@@ -49,20 +49,26 @@ justify-content: center;
 `;
 
 const Nav = styled.div `
-padding: 15px;
-margin-bottom : 20px;
+padding: 20px;
+margin-bottom: 20px;
 width: 100vw;
 height: 5vh;
 display: flex;
-justify-content: flex-end;
+justify-content: center;
 /* align-items: center; */
 /* position: fixed; */
 background: linear-gradient(to right, #C4E0E5, #4CA1AF);/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 a {
     text-decoration: none;
-    font-family: 'Saira Semi Condensed ', sans-serif;
-    font-size: 1.5em;
+    font-size: 1.0em;
+    margin-right: 50px;
+    margin-top: 20px;
+    font-family: 'Raleway', sans-serif;
+
+    :hover {
+    color: #fff;
 }
+} 
 `;
 
 
@@ -171,9 +177,9 @@ class UserView extends Component {
         return (
             <div>
             <Nav>
-<a href ='/'> Home &hearts;
+<a href ='/'> HOME 
 </a> 
-< a href='/users'>Designers 
+<a href='/users'>DESIGNERS
  </a>
                 </Nav>
             <Wrapper>
