@@ -17,9 +17,9 @@ align-items:center;
 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 a {
     text-decoration: none;
-    font-size: 1.0em;  
+    font-size: 2.0em;  
     font-family: 'Raleway', sans-serif;
-    color: black;
+    color: #4CA1AF;
     :hover {
         color: #fff;
     }

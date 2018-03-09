@@ -19,7 +19,7 @@ console.log("logging from the roompage", props.rooms)
             getAllFurnishings = {props.getAllFurnishings}
             furnishings={props.furnishings}
             userId = {props.userId} 
-            room_name = {props.room_name}
+            room_name={props.room_name}
             rooms={props.rooms}/>
             
         </ListWrapper>

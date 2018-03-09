@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import Furniture from './img/furniture.jpg'
+import Bathroom from './img/marble.jpg'
 
 
 
@@ -39,11 +40,16 @@ p{
 
 `
 
+export const BathContainer = styled.div`
+background: url(${Bathroom}) center no-repeat;
+ width: 100vw;
+height: 100vh;
+`
 
 export default{
 HomeContainer,
-InfoContainer
-
+InfoContainer,
+BathContainer
 
 
 }
