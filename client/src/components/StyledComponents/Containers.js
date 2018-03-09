@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import Furniture from './img/living.jpg'
+import Furniture from './img/furniture.jpg'
 
 
 
