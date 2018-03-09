@@ -10,14 +10,14 @@ export const Header = styled.div`
 width: 100vw;
 height: 10vh;
 display: flex;
-justify-content: space-between;
+justify-content: CENTER;
 background: linear-gradient(to right, #C4E0E5, #4CA1AF);
 position: fixed;
-
+align-items:center;
 a {
     text-decoration: none;
     font-size: 1.0em;  
-    font-family: 'Raleway', sans - serif;
+    font-family: 'Raleway', sans-serif;
     color: black;
     :hover {
         color: #fff;
