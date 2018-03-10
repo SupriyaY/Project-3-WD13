@@ -6,7 +6,7 @@ import Room from './Room'
 const RoomWrapper = styled.div`
 display: flex;
 align-items: center;
-justisfy-content: center;
+justify-content: center;
 flex-direction: row;
 padding: 20px;
 `;

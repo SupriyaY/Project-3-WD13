@@ -5,7 +5,7 @@ import FurnishingList from './FurnishingList'
 
 const FurnWrapper = styled.div`
 align-items: center;
-justisfy-content: center;
+justify-content: center;
 flex-direction: row;
 padding: 20 px;
 `;
