@@ -33,12 +33,9 @@ flex-direction: column;
 justify-content: center;
     img {
         height: 170 px;
-        width: 170 px;
-        /* border-radius: 50%; */
-    } &:hover 
-        {opacity: 0.8;
-        position: relative;
-        top: -20 px;}
+        width: 175 px;
+        box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    } 
 `;
 
 const People = styled.div `

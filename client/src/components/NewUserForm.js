@@ -12,14 +12,26 @@ align-items: center;
 text-align: right;
 padding: 20px;
 color: black;
-font-size: 3vh
-    input {
-    display: flex;
+font-size: 3vh;
+    /* input {
+    /* display: flex;
     align-items: center;
+     padding: 7px 0;
 width: 120px;
-height: 20px;
-
-             }
+height: 20px; */
+input {
+  padding: 7px 0;
+  width: 100%;
+  font-family: inherit;
+  font-size: 14px;
+  margin-bottom: 10px;
+  border-top: 0;
+  border-right: 0;
+  border-bottom: 1px solid #ddd;
+  border-left: 0;
+  transition: border-bottom-color .25s ease-in;
+overflow: hidden;
+             } 
 
 `;
 const Button = styled.button `
@@ -36,6 +48,8 @@ border-radius : 3px;
     bottom: -5px;
     }
  `;
+
+
 
 // trying something out from code.io const const UserAdd = styled.div `
 // overflow: hidden; padding: 0 0 32 px; margin: 48px auto 0; width: 300px;

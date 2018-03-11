@@ -48,6 +48,7 @@ display: flex;
 justify-content: center;
 /* align-items: center; */
 /* position: fixed; */
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.);
 background: linear-gradient(to right, #C4E0E5, #4CA1AF);/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 a {
      text-decoration: none;
