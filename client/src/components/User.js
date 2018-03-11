@@ -38,19 +38,17 @@ class User extends Component {
     render() {
 
         return (
+            <div>
             <Link to={`/users/${this.props._id}`}>
-                <div>
                     <UserPicture>
                         <div><img src={this.props.photo_url}/></div>
                     </UserPicture>
-                    <div>
+                    </Link>
+
                     <Name>
                     <div>{this.props.name}</div>
                     </Name>
                     </div>
-                </div>
-            </Link>
-
         )
 
     }
