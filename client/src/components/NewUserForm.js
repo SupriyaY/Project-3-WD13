@@ -38,16 +38,33 @@ const Button = styled.button `
 background-color: turquoise;
 color: white;
 font-size : 1em;
-margin : 1em;
-padding : 0.25em 1em;
-border : 2px solid turquoise;
-border-radius : 3px;
+margin: 1em;
+padding: 0.25em 1em;
+border: 2px solid turquoise;
+border-radius: 3px;
     &:hover {
     opacity: 0.8;
     position: relative;
     bottom: -5px;
     }
  `;
+const UserCard = styled.div`
+top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+   width: 45vh;
+    height: 60vh;
+    background-color: #white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid white;
+ box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 5px;
+    z-index: 999;
+`;
 
 
 
@@ -63,6 +80,7 @@ const NewUserForm = (props) => {
     }
 
     return (
+        <UserCard>
         <UserAdd>
             <h2>New Designer</h2>
             <form onSubmit={props.handleSubmit}>
@@ -107,6 +125,7 @@ const NewUserForm = (props) => {
 
             </form>
         </UserAdd>
+        </UserCard>
     )
 }
 

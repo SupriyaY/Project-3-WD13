@@ -25,7 +25,7 @@ bottom: 5px;
 `;
 
 const Wrapper = styled.div `
-font-family : 'Saira Semi Condensed', sans - serif;
+font-family:'Saira Semi Condensed', sans - serif;
 font-size: 1.0em;
 display: flex;
 align-items: center;
@@ -38,7 +38,7 @@ justify-content: center;
     } 
 `;
 
-const People = styled.div `
+const People = styled.div`
 display: flex;
 align-items: center;
 flex-direction: row;

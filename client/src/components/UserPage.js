@@ -132,7 +132,7 @@ class UserPage extends Component {
                             handleSubmit={this.handleSubmit}/>
                     </div>
                     <div>
-                        <Friends>Room Designers</Friends>
+                        <Friends>Designers</Friends>
                         <UserList users={this.props.users}/>
                     </div>
                 </Holder>
