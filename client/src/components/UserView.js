@@ -34,7 +34,7 @@ justify-content: center;
     img {
         height: 170 px;
         width: 170 px;
-        border-radius: 50%;
+        /* border-radius: 50%; */
     } &:hover 
         {opacity: 0.8;
         position: relative;

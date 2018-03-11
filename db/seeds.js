@@ -30,7 +30,7 @@ User
         username: 'AReddick', 
         name: 'Ayana Reddick', 
         email: 'areddick@gmail.com', 
-        photo_url: 'https://i.imgur.com/E2kISO8.png?1'})
+            photo_url: 'https://i.imgur.com/PBHBfWV.png'})
 
         const bedone = new Room({room_name: 'Bedroom'})
         const furnone = new Furnishing({
@@ -96,7 +96,7 @@ User
     })
     .then(() => {
 
-        const bschoenfeld = new User({username: 'BSchen', name: 'Beth Schoenfeld', email: 'bschoenfeld@gmail.com', photo_url: 'https://i.imgur.com/gO97E4f.png?2'})
+        const bschoenfeld = new User({ username: 'BSchen', name: 'Beth Schoenfeld', email: 'bschoenfeld@gmail.com', photo_url: 'https://i.imgur.com/9KsoBu7.png'})
 
         const bedtwo = new Room({room_name: 'Bedroom'})
         const furnfive = new Furnishing({
@@ -165,7 +165,7 @@ User
         const okhunlee = new User({username: 'Olee', 
         name: 'Okhyun Lee', 
         email: 'olee@gmail.com', 
-        photo_url: 'https://i.imgur.com/26YADxM.png?1'
+            photo_url: 'https://i.imgur.com/7DPmEBi.png'
 })
 
         const bedthree = new Room({room_name: 'Bedroom'})
@@ -232,7 +232,7 @@ User
 
     })
     .then(() => {
-        const driffel = new User({username: 'DRiff', name: 'Diana Riffel', email: 'driffel@gmail.com', photo_url: 'https://i.imgur.com/wzdv70Z.png?1'})
+        const driffel = new User({ username: 'DRiff', name: 'Diana Riffel', email: 'driffel@gmail.com', photo_url: 'https://i.imgur.com/yP98Z3B.png'})
 
         const bedfour = new Room({room_name: 'Bedroom'})
         const furnthirteen = new Furnishing({
