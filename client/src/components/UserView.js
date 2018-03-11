@@ -183,10 +183,12 @@ class UserView extends Component {
  
                 <div>
                     <div><img src={this.state.user.photo_url}/></div>
-                    <div>{this.state.user.username}</div>
+                    {/* <div>{this.state.user.username}</div>
                     <div>{this.state.user.name}</div>
-                    <div>{this.state.user.email}</div>
-      <div>          </div>
+                    <div>{this.state.user.email}</div> */}
+
+      <div>         
+           </div>
 </div>
                 <div>
                     <EditUserForm
