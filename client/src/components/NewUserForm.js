@@ -50,7 +50,7 @@ const NewUserForm = (props) => {
 
     return (
         <UserAdd>
-            <h2>Add Designer</h2>
+            <h2>New Designer</h2>
             <form onSubmit={props.handleSubmit}>
                 <div>
                     <input
