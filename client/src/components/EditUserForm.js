@@ -27,7 +27,7 @@ align-items: center;
 `;
 
 
-const EditForm = styled.div `
+const EditForm = styled.div`
 margin: 0 auto;
 display: flex;
 justify-content: flex-end;
@@ -39,7 +39,7 @@ color: white;
 font-size: 3vh;
 
 input {
-    padding: 7px 0;
+  padding: 7px 0;
   width: 100%;
   font-family: inherit;
   font-size: 14px;
@@ -61,7 +61,7 @@ border-radius: 50%;
 
      color: black;
  }   
-    `;
+`;
 
 
 const UserCard = styled.div`
@@ -124,7 +124,6 @@ const EditUserForm = (props) => (
       
     </form>
 <div><Button onClick={props.handleSubmit}>Edit</Button></div>
-            <Button onClick={this.banannaDelete}>Delete</Button>
 
     </EditForm>
     </UserCard>

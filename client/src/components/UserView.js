@@ -43,7 +43,7 @@ display: flex;
 align-items: center;
 flex-direction: row;
 justify-content: center;
-`;
+`
 
 const Nav = styled.div `
 padding: 20px;
@@ -74,7 +74,8 @@ class UserView extends Component {
     state = {
         user: {},
         rooms: [],
-        redirect: false
+        redirect: false,
+        furnishings: []
     }
 
     componentWillMount() {
@@ -111,8 +112,8 @@ class UserView extends Component {
             const userId = this.props.match.params.userId
             console.log("Getting all furnishings by userId and roomId", userId, roomId)
             const res = await axios.get(`/api/users/${userId}/rooms/${roomId}/furnishings`)
-            //const furnishings = res.data
-
+            const furnishings = res.data
+            console.log(res.data)
             this.setState({furnishings: res.data})
             console.log("Got furnishing and updated state", this.state.furnishings)
         } catch (err) {
@@ -164,6 +165,11 @@ class UserView extends Component {
         this.setState({user})
     }
 
+    componentWillMount() {
+        // this.getAllFurnishings()
+
+    }
+
     render() {
         console.log("Rendering UserView.User:", this.state.rooms)
         // if (this.state.redirect === true) {     return (<Redirect to={`/users`}/>) }
@@ -210,6 +216,10 @@ class UserView extends Component {
                 </div>
             </Wrapper>
             </div>
+
+
+
+
         )
 
     }

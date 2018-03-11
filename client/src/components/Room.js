@@ -3,6 +3,7 @@ import {Redirect, Link} from 'react-router-dom'
 import styled from 'styled-components'
 import axios from 'axios'
 import FurnishingPage from './FurnishingPage'
+import FurnishingList from "./FurnishingList";
 
 
 const RoomWrapper = styled.div `
@@ -17,7 +18,11 @@ padding: 20 px;
 
 
 class Room extends Component {
-
+    state = {
+        user: {},
+        rooms: [],
+        redirect: false
+    }
 
 
 
@@ -25,8 +30,8 @@ getAllRooms = async (userId) => {
     try {
         const userId = this.props.match.params.userId
         const res = await axios.get(`/api/users/${userId}/rooms`)
-        console.log("LOGGING RES", res)
-        const rooms = res.data.rooms
+        console.log("LOGGING RES", res.data)
+        const rooms = res.data
         console.log(rooms)
         this.setState({ rooms })
     } catch (err) {
@@ -34,6 +39,10 @@ getAllRooms = async (userId) => {
     }
 }
 
+    componentWillMount() {
+        this.getAllRooms()
+
+    }
 
 
 
@@ -42,10 +51,20 @@ getAllRooms = async (userId) => {
     
     console.log("Furnishings sent to Room:", this.props.furnishings)
 
+    const roomlist = this.state.rooms.map((room) => {
+        return(
+            <div key={room._id}>
+                {room.room_name}
+                <FurnishingList furnishings={room.furnishingsToAdd}/>
+            </div>
+        )
+    })
+
         return (
             <RoomWrapper>
-                {this.props.room_name}
-                <FurnishingPage furnishings={this.props.furnishings} roomId={this.props.roomId}/>
+                {roomlist}
+                {/* {this.props.room_name} */}
+                {/* <FurnishingPage furnishings={this.props.furnishings} roomId={this.props.roomId}/> */}
             </RoomWrapper>
 
         )

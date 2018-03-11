@@ -13,7 +13,8 @@ class App extends Component {
 
     this.state = {
       users: [],
-      user: {}
+      user: {},
+      rooms: {}
     }
 
     this.getAllUsers = this.getAllUsers.bind(this);
@@ -51,7 +52,7 @@ const userView = (props) => (<UserView users={this.state.users} getAllUsers={thi
           <Route exact path="/" component={Home}/>
           <Route exact path="/users" render={userInfo}/>
           <Route exact path="/users/:userId" render={userView}/>
-          <Route exact path="/users/:userId/rooms/:roomId" component={Room}/>
+          <Route exact path="/users/:userId/rooms" component={Room}/>
           <Route exact path="/users/:userId/bedroom"/>
           <Route exact path="/users/:userId/livingroom"/>
           <Route exact path="users/:userId/kitchen"/>

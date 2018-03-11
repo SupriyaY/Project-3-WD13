@@ -19,11 +19,14 @@ const Furnishing = (props) => {
 
         <FurnWrapper>
 
-            <a href={props.furniture_url}>Furniture</a> <br />
+            <a href={props.furnishing.furniture_url}>Furniture link</a>
+            <img src={props.furnishing.furniture_img} alt="" srcset=""/>
+
+            {/* <a href={props.furniture_url}>Furniture</a> <br /> */}
             {/* <img src={props.furniture_img}/> */}
-            <a href={props.light_url}>Light</a> <br />
+            {/* <a href={props.light_url}>Light</a> <br /> */}
            {/* {props.light_img} */}
-            <a href={props.rug_url}>Rug</a> <br />
+            {/* <a href={props.rug_url}>Rug</a> <br /> */}
             {/* {props.rug_img} */}
            
         </FurnWrapper>
