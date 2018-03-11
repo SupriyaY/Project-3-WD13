@@ -124,6 +124,8 @@ const EditUserForm = (props) => (
       
     </form>
 <div><Button onClick={props.handleSubmit}>Edit</Button></div>
+            <Button onClick={this.banannaDelete}>Delete</Button>
+
     </EditForm>
     </UserCard>
 

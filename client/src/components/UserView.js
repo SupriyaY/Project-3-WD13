@@ -194,7 +194,7 @@ class UserView extends Component {
                     <EditUserForm
                         user={this.state.user}
                         handleChange={this.handleChange}
-                        handleSubmit={this.handleSubmit}/>
+                        handleSubmit={this.handleSubmit} />
 
                     <Button onClick={this.banannaDelete}>Delete</Button>
                 </div>
