@@ -37,6 +37,7 @@ text-align: right;
 padding: 20px;
 color: white;
 font-size: 3vh;
+
 input {
     padding: 7px 0;
   width: 100%;
@@ -55,13 +56,41 @@ height: 170 px;
 width: 170 px;
 border-radius: 50%;
     }
+
+ p{
+
+     color: black;
+ }   
     `;
+
+
+const UserCard = styled.div`
+top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+   width: 45vh;
+    height: 60vh;
+    background-color: #white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid white;
+ box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 5px;
+    z-index: 999;
+`;
+
+
+
 
 
 const EditUserForm = (props) => (
 
-
+<UserCard>
     <EditForm>
+        <div><p>Edit Designer</p></div>
     <form onSubmit={props.handleSubmit}>
         <div>
             <input
@@ -96,6 +125,7 @@ const EditUserForm = (props) => (
     </form>
 <div><Button onClick={props.handleSubmit}>Edit</Button></div>
     </EditForm>
+    </UserCard>
 
 
 
