@@ -13,12 +13,7 @@ text-align: right;
 padding: 20px;
 color: black;
 font-size: 3vh;
-    /* input {
-    /* display: flex;
-    align-items: center;
-     padding: 7px 0;
-width: 120px;
-height: 20px; */
+ 
 input {
   padding: 7px 0;
   width: 100%;
@@ -37,7 +32,7 @@ overflow: hidden;
 const Button = styled.button `
 background-color: turquoise;
 color: white;
-font-size : 1em;
+font-size: 1em;
 margin: 1em;
 padding: 0.25em 1em;
 border: 2px solid turquoise;

@@ -15,9 +15,9 @@ font-size: 1em;
 margin:1em;
 padding: 0.25em 1em;
 border:2px solid turquoise;
-border-radius:3 px;
+border-radius:3px;
 display: flex;
-justisfy-content: center;
+justify-content: center;
 align-items: center;
 &:hover 
 {opacity: 0.8;
@@ -27,32 +27,32 @@ align-items: center;
 `;
 
 
-const EditForm = styled.div`
+const EditForm = styled.div `
 margin: 0 auto;
 display: flex;
 justify-content: flex-end;
 flex-direction:column;
 align-items: center;
 text-align: right;
-padding: 20px
+padding: 20px;
 color: white;
-font-size: 3vh
-
+font-size: 3vh;
 input {
     display: flex;
     align-items: center;
     width: 120 px;
     height: 20 px;
-};
+}
 img {
 height:170 px;
 width:170 px;
 border-radius: 50%;
-    };
+    }
     `;
 
 
 const EditUserForm = (props) => (
+
     <EditForm>
     <form onSubmit={props.handleSubmit}>
         <div>
@@ -88,8 +88,8 @@ const EditUserForm = (props) => (
     </form>
 <div><Button onClick={props.handleSubmit}>Edit</Button></div>
 
-
     </EditForm>
+    
 )
 
 export default EditUserForm;

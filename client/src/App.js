@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import Home from './components/Home'
 import UserPage from './components/UserPage'
 import UserView from './components/UserView'
-import Bathroom from './components/Bathroom'
+import Room from './components/Room'
 import axios from 'axios'
 
 class App extends Component {
@@ -51,7 +51,7 @@ const userView = (props) => (<UserView users={this.state.users} getAllUsers={thi
           <Route exact path="/" component={Home}/>
           <Route exact path="/users" render={userInfo}/>
           <Route exact path="/users/:userId" render={userView}/>
-          <Route exact path="/users/:userId/bathroom" component={Bathroom}/>
+          <Route exact path="/users/:userId/rooms/:roomId" component={Room}/>
           <Route exact path="/users/:userId/bedroom"/>
           <Route exact path="/users/:userId/livingroom"/>
           <Route exact path="users/:userId/kitchen"/>

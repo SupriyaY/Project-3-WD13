@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import {Redirect, Link} from 'react-router-dom'
 import styled from 'styled-components'
+import axios from 'axios'
 import FurnishingPage from './FurnishingPage'
 
 
@@ -15,8 +16,23 @@ padding: 20 px;
 
 
 
-
 class Room extends Component {
+
+
+
+
+getAllRooms = async (userId) => {
+    try {
+        const userId = this.props.match.params.userId
+        const res = await axios.get(`/api/users/${userId}/rooms`)
+        console.log("LOGGING RES", res)
+        const rooms = res.data.rooms
+        console.log(rooms)
+        this.setState({ rooms })
+    } catch (err) {
+        console.log(err)
+    }
+}
 
 
 

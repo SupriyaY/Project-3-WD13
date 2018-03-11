@@ -7,7 +7,7 @@ const FurnWrapper = styled.div`
 align-items: center;
 justify-content: center;
 flex-direction: row;
-padding: 20 px;
+padding: 20px;
 `;
 
 
