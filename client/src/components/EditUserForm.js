@@ -8,7 +8,7 @@ import styled from 'styled-components'
 // `; // input{ //     display: flex; //     align-items: center; //
 // width:100px; //     height: 20px; // };
 
-const Button = styled.button `  
+const Button = styled.button`  
 background-color:turquoise;
 color: white;
 font-size: 1em;
@@ -19,11 +19,11 @@ border-radius:3px;
 display: flex;
 justify-content: center;
 align-items: center;
-&:hover 
-{opacity: 0.8;
+&:hover {
+    opacity: 0.8;
     position: relative;
-    bottom: 5 px;}
-
+    bottom: 5 px;
+}
 `;
 
 
@@ -38,20 +38,28 @@ padding: 20px;
 color: white;
 font-size: 3vh;
 input {
-    display: flex;
-    align-items: center;
-    width: 120 px;
-    height: 20 px;
+    padding: 7px 0;
+  width: 100%;
+  font-family: inherit;
+  font-size: 14px;
+  margin-bottom: 10px;
+  border-top: 0;
+  border-right: 0;
+  border-bottom: 1px solid #ddd;
+  border-left: 0;
+  transition: border-bottom-color .25s ease-in;
+overflow: hidden;
 }
 img {
-height:170 px;
-width:170 px;
+height: 170 px;
+width: 170 px;
 border-radius: 50%;
     }
     `;
 
 
 const EditUserForm = (props) => (
+
 
     <EditForm>
     <form onSubmit={props.handleSubmit}>
@@ -87,9 +95,10 @@ const EditUserForm = (props) => (
       
     </form>
 <div><Button onClick={props.handleSubmit}>Edit</Button></div>
-
     </EditForm>
-    
+
+
+
 )
 
 export default EditUserForm;

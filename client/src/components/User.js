@@ -25,6 +25,12 @@ top: -20px;
 }
 `;
 
+const Name = styled.div `
+text-decoration: none;
+text-align: center;
+`;
+
+
 
 
 class User extends Component {
@@ -37,6 +43,11 @@ class User extends Component {
                     <UserPicture>
                         <div><img src={this.props.photo_url}/></div>
                     </UserPicture>
+                    <div>
+                    <Name>
+                    <div>{this.props.name}</div>
+                    </Name>
+                    </div>
                 </div>
             </Link>
 

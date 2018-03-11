@@ -187,7 +187,6 @@ class UserView extends Component {
                     <div>{this.state.user.name}</div>
                     <div>{this.state.user.email}</div>
       <div>          </div>
-<p>Update Designer Info</p>
 </div>
                 <div>
                     <EditUserForm
