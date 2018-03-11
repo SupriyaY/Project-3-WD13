@@ -1,5 +1,5 @@
-import React, {Component} from 'react'
-import {Redirect, Link} from 'react-router-dom'
+import React, { Component } from 'react'
+import { Redirect, Link } from 'react-router-dom'
 import axios from 'axios'
 import styled from 'styled-components'
 import EditUserForm from './EditUserForm'
@@ -8,7 +8,7 @@ import FurnishingPage from './FurnishingPage';
 
 
 
-const Button = styled.button ` 
+const Button = styled.button` 
 background-color: turquoise;
 color: white;
 font-size: 1em;
@@ -24,7 +24,7 @@ bottom: 5px;
 
 `;
 
-const Wrapper = styled.div `
+const Wrapper = styled.div`
 font-family:'Saira Semi Condensed', sans - serif;
 font-size: 1.0em;
 display: flex;
@@ -45,7 +45,7 @@ flex-direction: row;
 justify-content: center;
 `
 
-const Nav = styled.div `
+const Nav = styled.div`
 padding: 20px;
 margin-bottom: 20px;
 width: 100vw;
@@ -83,38 +83,38 @@ class UserView extends Component {
         this.getAllRooms()
     }
 
-    getUserInfo = async() => {
+    getUserInfo = async () => {
         try {
-            const {userId} = this.props.match.params
+            const { userId } = this.props.match.params
             const res = await axios.get(`/api/users/${userId}`)
             console.log(res.data)
-            this.setState({user: res.data})
+            this.setState({ user: res.data })
         } catch (err) {
             console.log(err)
         }
     }
 
-    getAllRooms = async(userId) => {
+    getAllRooms = async (userId) => {
         try {
-            const userId = this.props.match.params.userId   
+            const userId = this.props.match.params.userId
             const res = await axios.get(`/api/users/${userId}/rooms`)
             console.log("LOGGING RES", res)
             const rooms = res.data.rooms
             console.log(rooms)
-            this.setState({rooms})
+            this.setState({ rooms })
         } catch (err) {
             console.log(err)
         }
     }
 
-    getAllFurnishings = async(roomId) => {
+    getAllFurnishings = async (roomId) => {
         try {
             const userId = this.props.match.params.userId
             console.log("Getting all furnishings by userId and roomId", userId, roomId)
             const res = await axios.get(`/api/users/${userId}/rooms/${roomId}/furnishings`)
             const furnishings = res.data
             console.log(res.data)
-            this.setState({furnishings: res.data})
+            this.setState({ furnishings: res.data })
             console.log("Got furnishing and updated state", this.state.furnishings)
         } catch (err) {
             console.log(err)
@@ -123,21 +123,21 @@ class UserView extends Component {
     }
 
     //not sure about this code - it works but errors at the end
-    banannaDelete = async() => {
+    banannaDelete = async () => {
         try {
-            const {userId} = this.props.match.params
+            const { userId } = this.props.match.params
             const res = await axios.delete(`/api/users/${userId}`)
             console.log(res.data)
             this
                 .props
                 .getAllUsers()
-            this.setState({redirect: true, user: res.data})
+            this.setState({ redirect: true, user: res.data })
         } catch (err) {
             console.log(err)
         }
     }
 
-    handleSubmit = async(e) => {
+    handleSubmit = async (e) => {
         console.log("Submitting User")
         e.preventDefault()
         const letsbuy = {
@@ -151,7 +151,7 @@ class UserView extends Component {
         console.log("Submitting user:", letsbuy)
         const res = await axios.patch(`/api/users/${this.state.user._id}`, letsbuy)
         console.log('Posted user', res.data)
-        this.setState({redirect: false, newUser: res.data})
+        this.setState({ redirect: false, newUser: res.data })
 
     }
 
@@ -162,50 +162,48 @@ class UserView extends Component {
         }
 
         user[e.target.name] = e.target.value
-        this.setState({user})
+        this.setState({ user })
     }
 
     componentWillMount() {
-        // this.getAllFurnishings()
-
+        this.getUserInfo()
     }
+
+
 
     render() {
         console.log("Rendering UserView.User:", this.state.rooms)
         // if (this.state.redirect === true) {     return (<Redirect to={`/users`}/>) }
         if (this.state.redirect) {
-            return (<Redirect to={`/users`}/>)
+            return (<Redirect to={`/users`} />)
         }
+        const { userId } = this.props.match.params
 
         return (
             <div>
-            <Nav>
-<a href ='/'> HOME 
-</a> 
-<a href='/users'>DESIGNERS
- </a>
+                <Nav>
+                    <a href='/'> HOME</a>
+                    <a href='/users'>DESIGNERS</a>
                 </Nav>
-            <Wrapper>
- 
-                <div>
-                    {/* <div><img src={this.state.user.photo_url}/></div> */}
-                    {/* <div>{this.state.user.username}</div>
+                <Wrapper>
+
+                    <div>
+                        {/* <div><img src={this.state.user.photo_url}/></div> */}
+                        {/* <div>{this.state.user.username}</div>
                     <div>{this.state.user.name}</div>
                     <div>{this.state.user.email}</div> */}
 
-      <div>         
-           </div>
-</div>
-                <div>
-                    <EditUserForm
-                        user={this.state.user}
-                        handleChange={this.handleChange}
-                        handleSubmit={this.handleSubmit} />
+                    </div>
+                    <div>
+                        <EditUserForm
+                            user={this.state.user}
+                            handleChange={this.handleChange}
+                            handleSubmit={this.handleSubmit} />
 
-                    <Button onClick={this.banannaDelete}>Delete</Button>
-                </div>
-                
-                <div className ="People">
+                        <Button onClick={this.banannaDelete}>Delete</Button>
+                    </div>
+
+                    {/* <div className ="People">
                 
                     <RoomPage
                         getAllFurnishings={this.getAllFurnishings}
@@ -213,11 +211,14 @@ class UserView extends Component {
                         rooms={this.state.rooms}
                         userId={this.props.match.params.userId}/>
                         
+                </div> */}
+                </Wrapper>
+                <div>
+                    <Link to={`/users/${userId}/rooms`}>Rooms</Link>
                 </div>
-            </Wrapper>
             </div>
 
-
+      
 
 
         )

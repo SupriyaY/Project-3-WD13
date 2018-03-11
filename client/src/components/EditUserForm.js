@@ -3,10 +3,7 @@ import axios from 'axios'
 import {Redirect} from 'react-router-dom'
 import styled from 'styled-components'
 
-// const UserAdd = styled.div ` margin: 0 auto; display: flex; justify -
-// content: flex - end; align - items: center; text - align: right; padding:20px
-// `; // input{ //     display: flex; //     align-items: center; //
-// width:100px; //     height: 20px; // };
+
 
 const Button = styled.button`  
 background-color:turquoise;
@@ -24,7 +21,7 @@ align-items: center;
     position: relative;
     bottom: 5 px;
 }
-`;
+`
 
 
 const EditForm = styled.div`
@@ -127,7 +124,6 @@ const EditUserForm = (props) => (
 
     </EditForm>
     </UserCard>
-
 
 
 )
