@@ -68,6 +68,17 @@ a {
 } 
 `;
 
+const Board = styled.div`
+display: flex;
+justify-content:center;
+align-items: center;
+
+a{
+    text-decoration: none;
+}
+
+`
+
 
 
 class UserView extends Component {
@@ -203,18 +214,11 @@ class UserView extends Component {
                         <Button onClick={this.banannaDelete}>Delete</Button>
                     </div>
 
-                    {/* <div className ="People">
-                
-                    <RoomPage
-                        getAllFurnishings={this.getAllFurnishings}
-                        furnishings={this.state.furnishings}
-                        rooms={this.state.rooms}
-                        userId={this.props.match.params.userId}/>
-                        
-                </div> */}
                 </Wrapper>
                 <div>
-                    <Link to={`/users/${userId}/rooms`}>Rooms</Link>
+                    <Board>
+                    <Link to={`/users/${userId}/rooms`}>Rooms Vision Board</Link>
+                    </Board>
                 </div>
             </div>
 

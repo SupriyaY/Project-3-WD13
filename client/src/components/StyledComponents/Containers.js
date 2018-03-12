@@ -17,28 +17,7 @@ background: url(${Furniture}) center no-repeat;
     z-index: -999;
     `;
 
-export const InfoContainer = styled.div `
-background-color: rgba(255, 255, 255, 255) ;
-width: 60vw;
-height: 40vh;
-align-items: center;
-justify-content: center;
-border: 3px solid #C4E0E5;
 
- h1{
-color: #C4E0E5;
-font-size: 1em;
-} 
-
-h2{
-
-}
-p{
-
-
-}
-
-`
 
 export const BathContainer = styled.div`
 background: url(${Bathroom}) center no-repeat;
@@ -48,7 +27,6 @@ height: 100vh;
 
 export default{
 HomeContainer,
-InfoContainer,
 BathContainer
 
 

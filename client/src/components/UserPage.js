@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import {Redirect} from 'react-router-dom'
 import styled from 'styled-components'
 import axios from 'axios'
-
+import {Header, Footer} from './StyledComponents/HeaderFooter'
 import UserList from './UserList'
 import NewUserForm from './NewUserForm'
 
@@ -65,10 +65,13 @@ a {
 
 `;
 
-// trying something out from code.io const CardStyling = styled.div` overflow:
-// hidden; padding: 0 0 32 px; margin: 48px auto 0; width: 300px; font-family:
-// Quicksand,arial,sans - serif; box-shadow: 0 0 20 px rgba(0, 0, 0, .05),0 0 px
-// 40 px rgba(0, 0, 0, .08); border-radius: 5 px; `;
+
+const PageHolder = styled.div`
+margin-top: 20px;
+margin-bottom: 20px;
+
+`
+
 
 class UserPage extends Component {
 
@@ -114,12 +117,13 @@ class UserPage extends Component {
     render() {
         return (
 <div>
-                <Nav>
+                <Header>
                     <a href='/'>HOME
                     </a>
                     <a href='/users'>DESIGNERS
                     </a>
-                </Nav>
+                </Header>
+                <PageHolder>
                 <Holder>
                     <div>
 
@@ -136,9 +140,11 @@ class UserPage extends Component {
                         <UserList users={this.props.users}/>
                     </div>
                 </Holder>
-                {/* <Footer>
 
-                    </Footer> */}
+            </PageHolder>
+                <Footer>
+
+                    </Footer>
 </div>
         )
     }

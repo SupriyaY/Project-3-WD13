@@ -23,7 +23,6 @@ align-items: center;
 }
 `
 
-
 const EditForm = styled.div`
 margin: 0 auto;
 display: flex;
@@ -51,7 +50,6 @@ overflow: hidden;
 img {
 height: 170 px;
 width: 170 px;
-border-radius: 50%;
     }
 
  p{

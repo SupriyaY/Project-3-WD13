@@ -63,10 +63,6 @@ top: 0;
 
 
 
-// trying something out from code.io const const UserAdd = styled.div `
-// overflow: hidden; padding: 0 0 32 px; margin: 48px auto 0; width: 300px;
-// font-family: Quicksand,arial,sans - serif; box-shadow: 0 0 20 px rgba(0, 0,0,
-// .05),0 0 px 40 px rgba(0, 0, 0, .08); border-radius: 5 px;  `;
 
 const NewUserForm = (props) => {
 
