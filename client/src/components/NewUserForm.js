@@ -43,6 +43,8 @@ border-radius: 3px;
     bottom: -5px;
     }
  `;
+
+ 
 const UserCard = styled.div`
 top: 0;
     left: 0;
