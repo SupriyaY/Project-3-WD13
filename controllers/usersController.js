@@ -21,7 +21,7 @@ router.post('/', (request, response) => {
     console.log('posting new user', request.body)
     const newUser = request.body
     if (!newUser.photo_url) {
-        newUser.photo_url = 'https://i.imgur.com/xln20Nb.jpg?1'
+        newUser.photo_url = 'https://i.imgur.com/88ynR0R.png'
 
     }
     console.log("About to update DB")
