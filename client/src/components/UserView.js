@@ -7,22 +7,31 @@ import RoomPage from './RoomPage'
 import FurnishingPage from './FurnishingPage';
 
 
-
 const Button = styled.button` 
-background-color: turquoise;
-color: white;
+background-color: white;
+color: #4CA1AF;
 font-size: 1em;
 margin: 1em;
 padding: 0.25em 1em;
-border: 2px solid turquoise;
+border: 2px solid #4CA1AF;
 border-radius: 3px;
-    &:hover {
-opacity: 0.8;
-position:relative;
 bottom: 5px;
+
+
+    &:hover {
+color: black;
+position:relative;
+bottom: -5px;
 }
 
 `;
+
+const ButtonFormat = styled.div`
+display:flex;
+align-items: center;
+justify-content: center;
+`
+
 
 const Wrapper = styled.div`
 font-family:'Saira Semi Condensed', sans - serif;
@@ -212,19 +221,20 @@ class UserView extends Component {
                             user={this.state.user}
                             handleChange={this.handleChange}
                             handleSubmit={this.handleSubmit} />
-
-                        <Button onClick={this.banannaDelete}>Delete</Button>
+                        <ButtonFormat>
+                            <Button onClick={this.banannaDelete}>Remove Designer</Button>
+                        </ButtonFormat>
                     </div>
 
                 </Wrapper>
                 <div>
                     <Board>
-                    <Link to={`/users/${userId}/rooms`}>Rooms Vision Board</Link>
+                        <Link to={`/users/${userId}/rooms`}>Rooms Vision Board</Link>
                     </Board>
                 </div>
             </div>
 
-      
+
 
 
         )

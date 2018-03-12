@@ -30,12 +30,12 @@ overflow: hidden;
 
 `;
 const Button = styled.button `
-background-color: turquoise;
-color: white;
+background-color: white;
+color: #4CA1AF;
 font-size: 1em;
 margin: 1em;
 padding: 0.25em 1em;
-border: 2px solid turquoise;
+border:2px solid #4CA1AF;
 border-radius: 3px;
     &:hover {
     opacity: 0.8;

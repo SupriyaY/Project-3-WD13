@@ -6,20 +6,20 @@ import styled from 'styled-components'
 
 
 const Button = styled.button`  
-background-color:turquoise;
-color: white;
+background-color: white;
+color: #4CA1AF;
 font-size: 1em;
 margin:1em;
 padding: 0.25em 1em;
-border:2px solid turquoise;
+border:2px solid #4CA1AF;
 border-radius:3px;
 display: flex;
 justify-content: center;
 align-items: center;
 &:hover {
-    opacity: 0.8;
+    color: black;
     position: relative;
-    bottom: 5 px;
+    bottom: -5px;
 }
 `
 
