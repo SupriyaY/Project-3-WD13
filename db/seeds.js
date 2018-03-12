@@ -96,7 +96,7 @@ User
     })
     .then(() => {
 
-        const bschoenfeld = new User({ username: 'BSchen', name: 'Beth Schoenfeld', email: 'bschoenfeld@gmail.com', photo_url: 'https://i.imgur.com/9KsoBu7.png'})
+        const bschoenfeld = new User({ username: 'BSchen', name: 'Beth Schoenfeld', email: 'bschoen@gmail.com', photo_url: 'https://i.imgur.com/9KsoBu7.png'})
 
         const bedtwo = new Room({room_name: 'Bedroom'})
         const furnfive = new Furnishing({

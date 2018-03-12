@@ -46,8 +46,8 @@ margin-top: 20px;
 
 
 const PageHolder = styled.div`
-margin-top: 20px;
-margin-bottom: 20px;
+margin-top: 40px;
+margin-bottom: 40px;
 
 `
 

@@ -3,8 +3,8 @@ import styled from 'styled-components'
 
 
 export const HomeHeader = styled.div`
-width: 100vw;
-height: 10vh;
+min-width: 100vw;
+min-height: 10vh;
 display: flex;
 justify-content: center;
 background: white;
@@ -25,8 +25,8 @@ a {
 `;
 
 export const Header = styled.div`
-width: 100vw;
-height: 10vh;
+min-width: 100vw;
+min-height: 10vh;
 display: flex;
 justify-content: center;
 background: linear-gradient(to right, #C4E0E5, #4CA1AF);

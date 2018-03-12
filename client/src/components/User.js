@@ -29,6 +29,7 @@ const Name = styled.div `
 text-decoration: none;
 text-align: left;
 margin-left: 20px;
+font-size: 1em;
 `;
 
 const UserCard = styled.div`
@@ -36,9 +37,9 @@ top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    margin: auto;
-   width: 35vh;
-    height: 20vh;
+    margin: 10px;
+    min-width: 30vh;
+    min-height: 20vh;
     background-color: #white;
     display: flex;
     justify-content: center;
