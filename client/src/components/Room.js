@@ -10,8 +10,10 @@ const RoomWrapper = styled.div `
 align-items: center;
 justify-content: center;
 flex-direction: row;
-padding: 20 px;
+padding:20px;
 `;
+
+
 
 
 
@@ -45,8 +47,6 @@ getAllRooms = async (userId) => {
     }
 
 
-
-
     render() {
     
     console.log("Furnishings sent to Room:", this.props.furnishings)
@@ -63,8 +63,6 @@ getAllRooms = async (userId) => {
         return (
             <RoomWrapper>
                 {roomlist}
-                {/* {this.props.room_name} */}
-                {/* <FurnishingPage furnishings={this.props.furnishings} roomId={this.props.roomId}/> */}
             </RoomWrapper>
 
         )
