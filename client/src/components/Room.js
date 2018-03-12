@@ -14,11 +14,6 @@ padding:20px;
 `;
 
 
-
-
-
-
-
 class Room extends Component {
     state = {
         user: {},

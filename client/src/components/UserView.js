@@ -17,8 +17,6 @@ padding: 0.25em 1em;
 border: 2px solid #4CA1AF;
 border-radius: 3px;
 bottom: 5px;
-
-
     &:hover {
 color: black;
 position:relative;
@@ -31,8 +29,7 @@ const ButtonFormat = styled.div`
 display:flex;
 align-items: center;
 justify-content: center;
-`
-
+`;
 
 const Wrapper = styled.div`
 font-family:'Saira Semi Condensed', sans - serif;
@@ -51,43 +48,21 @@ flex-direction: row;
 justify-content: center;
 `
 
-const Nav = styled.div`
-padding: 20px;
-margin-bottom: 20px;
-width: 100vw;
-height: 5vh;
-display: flex;
-justify-content: center;
-/* align-items: center; */
-/* position: fixed; */
-background: linear-gradient(to right, #C4E0E5, #4CA1AF);/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-a {
-    text-decoration: none;
-    font-size: 1.0em;
-    margin-right: 50px;
-    margin-top: 20px;
-    font-family: 'Raleway', sans-serif;
-
-    :hover {
-    color: #fff;
-}
-} 
-`;
-
 const Board = styled.div`
 display: flex;
 justify-content:center;
 align-items: center;
 
-
 a{
     text-decoration: none;
-
 }
+`
+const PageFormat = styled.div`
+margin-top: 20px;
+margin-bottom: 20px;
+
 
 `
-
-
 
 class UserView extends Component {
     state = {
@@ -197,39 +172,35 @@ class UserView extends Component {
         const { userId } = this.props.match.params
 
         return (
-        <div>
+            <div>
                 <Header>
                     <a href='/'> HOME</a>
                     <a href='/users'>DESIGNERS</a>
                 </Header>
+<PageFormat>
+                
+                    <Wrapper>
 
-<div>
-                <Wrapper>
+                        <div>
+                            <EditUserForm
+                                user={this.state.user}
+                                handleChange={this.handleChange}
+                                handleSubmit={this.handleSubmit} />
+                            <ButtonFormat>
+                                <Button onClick={this.banannaDelete}>Remove Designer</Button>
+                            </ButtonFormat>
+                        </div>
+                    </Wrapper>
 
-                    <div>
-                        <EditUserForm
-                            user={this.state.user}
-                            handleChange={this.handleChange}
-                            handleSubmit={this.handleSubmit} />
-                        <ButtonFormat>
-                            <Button onClick={this.banannaDelete}>Remove Designer</Button>
-                        </ButtonFormat>
-                    </div>
-                </Wrapper>
-
-                </div>
                 <div>
                     <Board>
                         <Link to={`/users/${userId}/rooms`}>Rooms Vision Board</Link>
                     </Board>
-
-                    <Footer>
+                    </div>
+</PageFormat>
+                <Footer>
                     </Footer>
-                </div>
-                </div>
-
-
-
+            </div>
 
         )
 
