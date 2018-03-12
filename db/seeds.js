@@ -35,7 +35,7 @@ User
         const bedone = new Room({room_name: 'Bedroom'})
         const furnone = new Furnishing({
             furniture_url: "https://www.wayfair.com/",
-            furniture_img: "",
+            furniture_img: "https://i.imgur.com/5hq2Mo2.png?1",
             light_url: "https://www.wayfair.com/",
             light_img: "",
             rug_url: "https://www.wayfair.com/",
@@ -101,7 +101,7 @@ User
         const bedtwo = new Room({room_name: 'Bedroom'})
         const furnfive = new Furnishing({
             furniture_url: "https://www.wayfair.com/",
-            furniture_img: "",
+            furniture_img: "https://i.imgur.com/5hq2Mo2.png?1",
             light_url: "https://www.wayfair.com/",
             light_img: "",
             rug_url: "https://www.wayfair.com/",
@@ -171,7 +171,7 @@ User
         const bedthree = new Room({room_name: 'Bedroom'})
         const furnnine = new Furnishing({
             furniture_url: "https://www.wayfair.com/",
-            furniture_img: "",
+            furniture_img: "https://i.imgur.com/5hq2Mo2.png?1",
             light_url: "https://www.wayfair.com/",
             light_img: "",
             rug_url: "https://www.wayfair.com/",
@@ -237,7 +237,7 @@ User
         const bedfour = new Room({room_name: 'Bedroom'})
         const furnthirteen = new Furnishing({
             furniture_url: "https://www.wayfair.com/",
-            furniture_img: "",
+            furniture_img: "https://i.imgur.com/5hq2Mo2.png?1",
             light_url: "https://www.wayfair.com/",
             light_img: "",
             rug_url: "https://www.wayfair.com/",
