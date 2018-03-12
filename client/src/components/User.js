@@ -31,6 +31,25 @@ text-align: left;
 margin-left: 20px;
 `;
 
+const UserCard = styled.div`
+top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+   width: 35vh;
+    height: 20vh;
+    background-color: #white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid white;
+ box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 5px;
+    z-index: 999;
+`;
+
+
 
 
 
@@ -46,11 +65,13 @@ class User extends Component {
                     </UserPicture>
                     </Link>
 
+<UserCard>
                     <Name>
-                    <div>Name: {this.props.name}</div>
-                    <div>Username: {this.props.username}</div> 
-                    <div>Email:{this.props.email}</div>
+                    <div>{this.props.name}</div>
+                    <div>{this.props.username}</div> 
+                    <div>{this.props.email}</div>
                     </Name>
+  </UserCard>                  
                     </div>
         )
 
