@@ -5,6 +5,7 @@ import styled from 'styled-components'
 import EditUserForm from './EditUserForm'
 import RoomPage from './RoomPage'
 import FurnishingPage from './FurnishingPage';
+import { Header, Footer } from './StyledComponents/HeaderFooter'
 
 
 const Button = styled.button` 
@@ -40,11 +41,7 @@ display: flex;
 align-items: center;
 flex-direction: column;
 justify-content: center;
-    img {
-        height: 170 px;
-        width: 175 px;
-        box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    } 
+
 `;
 
 const People = styled.div`
@@ -144,7 +141,6 @@ class UserView extends Component {
 
     }
 
-    //not sure about this code - it works but errors at the end
     banannaDelete = async () => {
         try {
             const { userId } = this.props.match.params
@@ -195,27 +191,21 @@ class UserView extends Component {
 
     render() {
         console.log("Rendering UserView.User:", this.state.rooms)
-        // if (this.state.redirect === true) {     return (<Redirect to={`/users`}/>) }
         if (this.state.redirect) {
             return (<Redirect to={`/users`} />)
         }
         const { userId } = this.props.match.params
 
         return (
-            <div>
-                <Nav>
+        <div>
+                <Header>
                     <a href='/'> HOME</a>
                     <a href='/users'>DESIGNERS</a>
-                </Nav>
+                </Header>
+
+<div>
                 <Wrapper>
 
-                    <div>
-                        {/* <div><img src={this.state.user.photo_url}/></div> */}
-                        {/* <div>{this.state.user.username}</div>
-                    <div>{this.state.user.name}</div>
-                    <div>{this.state.user.email}</div> */}
-
-                    </div>
                     <div>
                         <EditUserForm
                             user={this.state.user}
@@ -225,14 +215,18 @@ class UserView extends Component {
                             <Button onClick={this.banannaDelete}>Remove Designer</Button>
                         </ButtonFormat>
                     </div>
-
                 </Wrapper>
+
+                </div>
                 <div>
                     <Board>
                         <Link to={`/users/${userId}/rooms`}>Rooms Vision Board</Link>
                     </Board>
+
+                    <Footer>
+                    </Footer>
                 </div>
-            </div>
+                </div>
 
 
 

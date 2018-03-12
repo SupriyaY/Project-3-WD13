@@ -53,10 +53,6 @@ const userView = (props) => (<UserView users={this.state.users} getAllUsers={thi
           <Route exact path="/users" render={userInfo}/>
           <Route exact path="/users/:userId" render={userView}/>
           <Route exact path="/users/:userId/rooms" component={Room}/>
-          <Route exact path="/users/:userId/bedroom"/>
-          <Route exact path="/users/:userId/livingroom"/>
-          <Route exact path="users/:userId/kitchen"/>
-        
         </Switch>
       </Router>
 

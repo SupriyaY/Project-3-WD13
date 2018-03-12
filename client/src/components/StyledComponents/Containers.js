@@ -10,24 +10,21 @@ export const HomeContainer = styled.div`
 background: url(${Furniture}) center no-repeat;
     width: 100vw;
     height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex: 1 0 auto;
-    z-index: -999;
-    `;
+            box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
 
+`
 
 export const BathContainer = styled.div`
 background: url(${Bathroom}) center no-repeat;
 width: 100vw;
 height: 100vh;
+
 `
 
 export default{
-HomeContainer,
-BathContainer
+HomeContainer
+
 
 
 }

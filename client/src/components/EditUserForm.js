@@ -58,15 +58,14 @@ width: 170 px;
  }   
 `;
 
-
 const UserCard = styled.div`
 top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     margin: auto;
-   width: 45vh;
-    height: 60vh;
+   min-width: 45vh;
+    min-height: 60vh;
     background-color: #white;
     display: flex;
     justify-content: center;
@@ -84,6 +83,7 @@ top: 0;
 const EditUserForm = (props) => (
 
 <UserCard>
+
     <EditForm>
         <div><p>Edit Designer</p></div>
     <form onSubmit={props.handleSubmit}>

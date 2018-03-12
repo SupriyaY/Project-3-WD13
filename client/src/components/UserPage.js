@@ -16,16 +16,7 @@ border: 2px solid turquoise;
 border-radius: 3px;
 `;
 
-// const Body = styled.div `
-// margin: 0;
-// width: 100%;
-// height: 100%;
-// position: relative;
-// /* background: #FFBC73;
-// background: -webkit-linear-gradient(to left, #FF5F6D, #FFC371);
-// background: linear-gradient(to left, #FF5F6D, #FFC371); */
-// background-color: white;
-// `;
+
 
 const Holder = styled.div `
 display: flex;
@@ -40,8 +31,6 @@ font-size: 2.5em;
 margin-left: 30px;
 margin-top: 20px;
 `;
-
-
 
 
 
