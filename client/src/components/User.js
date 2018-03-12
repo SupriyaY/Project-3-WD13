@@ -27,7 +27,8 @@ top: -20px;
 
 const Name = styled.div `
 text-decoration: none;
-text-align: center;
+text-align: left;
+margin-left: 20px;
 `;
 
 
@@ -46,7 +47,9 @@ class User extends Component {
                     </Link>
 
                     <Name>
-                    <div>{this.props.name}</div>
+                    <div>Name: {this.props.name}</div>
+                    <div>Username: {this.props.username}</div> 
+                    <div>Email:{this.props.email}</div>
                     </Name>
                     </div>
         )

@@ -34,36 +34,15 @@ justify-content: center;
 align-items: center;
  `;
 
-const Friends = styled.h1 `
+const Friends = styled.div `
 font-family:'Saira Semi Condensed', sans-serif;
-font-size: 3.5em;
+font-size: 2.5em;
+margin-left: 30px;
+margin-top: 20px;
 `;
 
-const Nav = styled.div `
-padding: 20px;
-margin-bottom: 20px;
-width: 100vw;
-height: 5vh;
-display: flex;
-justify-content: center;
-/* align-items: center; */
-/* position: fixed; */
-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.);
-background: linear-gradient(to right, #C4E0E5, #4CA1AF);/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-a {
-     text-decoration: none;
-    font-size: 1.0em;
-    margin-right: 30px;
-    margin-top: 20px;
-    font-family: 'Raleway', sans-serif;
-
-        :hover {
-    color: #fff;
-}
-}
 
 
-`;
 
 
 const PageHolder = styled.div`

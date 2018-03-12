@@ -31,11 +31,22 @@ display: flex;
 justify-content: center;
 background: linear-gradient(to right, #C4E0E5, #4CA1AF);
 align-items:center;
- a {
-    text-decoration: none;
- }
+
+   a {
+     text-decoration: none;
+    font-size: 1.0em;
+    margin-right: 30px;
+    margin-top: 20px;
+    font-family: 'Raleway', sans-serif;
+text-align: center;
+        :hover {
+    color: #fff;
+}
+}
+
+
+`;
     
-`
 
 
 export const Footer = styled.div`
