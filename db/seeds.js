@@ -36,9 +36,9 @@ User
         const furnone = new Furnishing({
             furniture_url: "https://www.wayfair.com/",
             furniture_img: "",
-            light_url: "https://www.jossandmain.com/",
+            light_url: "https://www.wayfair.com/",
             light_img: "",
-            rug_url: "https://www.overstock.com/",
+            rug_url: "https://www.wayfair.com/",
             rug_img: ""
         })
 
@@ -50,9 +50,9 @@ User
         const furntwo = new Furnishing({
             furniture_url: "https://www.wayfair.com/",
             furniture_img: "",
-            light_url: "https://www.jossandmain.com/",
+            light_url: "https://www.wayfair.com/",
             light_img: "",
-            rug_url: "https://www.overstock.com/",
+            rug_url: "https://www.wayfair.com/",
             rug_img: ""
         })
 
@@ -64,9 +64,9 @@ User
         const furnthree = new Furnishing({
             furniture_url: "https://www.wayfair.com/",
             furniture_img: "",
-            light_url: "https://www.jossandmain.com/",
+            light_url: "https://www.wayfair.com/",
             light_img: "",
-            rug_url: "https://www.overstock.com/",
+            rug_url: "https://www.wayfair.com/",
             rug_img: ""
         })
 
@@ -78,9 +78,9 @@ User
         const furnfour = new Furnishing({
             furniture_url: "https://www.wayfair.com/",
             furniture_img: "",
-            light_url: "https://www.jossandmain.com/",
+            light_url: "https://www.wayfair.com/",
             light_img: "",
-            rug_url: "https://www.overstock.com/",
+            rug_url: "https://www.wayfair.com/",
             rug_img: ""
         })
 
@@ -102,9 +102,9 @@ User
         const furnfive = new Furnishing({
             furniture_url: "https://www.wayfair.com/",
             furniture_img: "",
-            light_url: "https://www.jossandmain.com/",
+            light_url: "https://www.wayfair.com/",
             light_img: "",
-            rug_url: "https://www.overstock.com/",
+            rug_url: "https://www.wayfair.com/",
             rug_img: ""
         })
 
@@ -116,9 +116,9 @@ User
         const furnsix = new Furnishing({
             furniture_url: "https://www.wayfair.com/",
             furniture_img: "",
-            light_url: "https://www.jossandmain.com/",
+            light_url: "https://www.wayfair.com/",
             light_img: "",
-            rug_url: "https://www.overstock.com/",
+            rug_url: "https://www.wayfair.com/",
             rug_img: ""
         })
 
@@ -130,9 +130,9 @@ User
         const furnseven = new Furnishing({
             furniture_url: "https://www.wayfair.com/",
             furniture_img: "",
-            light_url: "https://www.jossandmain.com/",
+            light_url: "https://www.wayfair.com/",
             light_img: "",
-            rug_url: "https://www.overstock.com/",
+            rug_url: "https://www.wayfair.com/",
             rug_img: ""
         })
 
@@ -144,7 +144,7 @@ User
         const furneight = new Furnishing({
             furniture_url: "https://www.wayfair.com/",
             furniture_img: "",
-            light_url: "https://www.jossandmain.com/",
+            light_url: "https://www.wayfair.com/",
             light_img: "",
             rug_url: "https://www.overstock.com/",
             rug_img: ""
@@ -172,9 +172,9 @@ User
         const furnnine = new Furnishing({
             furniture_url: "https://www.wayfair.com/",
             furniture_img: "",
-            light_url: "https://www.jossandmain.com/",
+            light_url: "https://www.wayfair.com/",
             light_img: "",
-            rug_url: "https://www.overstock.com/",
+            rug_url: "https://www.wayfair.com/",
             rug_img: ""
         })
 
@@ -186,9 +186,9 @@ User
         const furnten = new Furnishing({
             furniture_url: "https://www.wayfair.com/",
             furniture_img: "",
-            light_url: "https://www.jossandmain.com/",
+            light_url: "https://www.wayfair.com/",
             light_img: "",
-            rug_url: "https://www.overstock.com/",
+            rug_url: "https://www.wayfair.com/",
             rug_img: ""
         })
 
@@ -200,9 +200,9 @@ User
         const furneleven = new Furnishing({
             furniture_url: "https://www.wayfair.com/",
             furniture_img: "",
-            light_url: "https://www.jossandmain.com/",
+            light_url: "https://www.wayfair.com/",
             light_img: "",
-            rug_url: "https://www.overstock.com/",
+            rug_url: "https://www.wayfair.com/",
             rug_img: ""
         })
 
@@ -214,9 +214,9 @@ User
         const furntwelve = new Furnishing({
             furniture_url: "https://www.wayfair.com/",
             furniture_img: "",
-            light_url: "https://www.jossandmain.com/",
+            light_url: "https://www.wayfair.com/",
             light_img: "",
-            rug_url: "https://www.overstock.com/",
+            rug_url: "https://www.wayfair.com/",
             rug_img: ""
         })
 
@@ -238,9 +238,9 @@ User
         const furnthirteen = new Furnishing({
             furniture_url: "https://www.wayfair.com/",
             furniture_img: "",
-            light_url: "https://www.jossandmain.com/",
+            light_url: "https://www.wayfair.com/",
             light_img: "",
-            rug_url: "https://www.overstock.com/",
+            rug_url: "https://www.wayfair.com/",
             rug_img: ""
         })
 
@@ -252,9 +252,9 @@ User
         const furnfourteen = new Furnishing({
             furniture_url: "https://www.wayfair.com/",
             furniture_img: "",
-            light_url: "https://www.jossandmain.com/",
+            light_url: "https://www.wayfair.com/",
             light_img: "",
-            rug_url: "https://www.overstock.com/",
+            rug_url: "https://www.wayfair.com/",
             rug_img: ""
         })
 
@@ -266,9 +266,9 @@ User
         const furnfifteen = new Furnishing({
             furniture_url: "https://www.wayfair.com/",
             furniture_img: "",
-            light_url: "https://www.jossandmain.com/",
+            light_url: "https://www.wayfair.com/",
             light_img: "",
-            rug_url: "https://www.overstock.com/",
+            rug_url: "https://www.wayfair.com/",
             rug_img: ""
         })
 
@@ -280,9 +280,9 @@ User
         const furnsixteen = new Furnishing({
             furniture_url: "https://www.wayfair.com/",
             furniture_img: "",
-            light_url: "https://www.jossandmain.com/",
+            light_url: "https://www.wayfair.com/",
             light_img: "",
-            rug_url: "https://www.overstock.com/",
+            rug_url: "https://www.wayfair.com/",
             rug_img: ""
         })
 

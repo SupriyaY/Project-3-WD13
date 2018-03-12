@@ -20,7 +20,7 @@ background: url(${Creative}) center no-repeat;
 background-size: cover;
 min-width: 100vw;
 min-height: 100vh;
-
+z-index: -999;
 `
 
 
