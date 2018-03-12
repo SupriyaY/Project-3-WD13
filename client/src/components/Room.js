@@ -3,7 +3,8 @@ import {Redirect, Link} from 'react-router-dom'
 import styled from 'styled-components'
 import axios from 'axios'
 import FurnishingPage from './FurnishingPage'
-import FurnishingList from "./FurnishingList";
+import FurnishingList from './FurnishingList'
+import {IdeaBoard} from './StyledComponents/Containers'
 
 
 const RoomWrapper = styled.div `
@@ -56,9 +57,11 @@ getAllRooms = async (userId) => {
     })
 
         return (
+            <IdeaBoard>
             <RoomWrapper>
                 {roomlist}
             </RoomWrapper>
+            </IdeaBoard>
 
         )
 
