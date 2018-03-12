@@ -20,7 +20,7 @@ const Furnishing = (props) => {
         <FurnWrapper>
 
             <a href={props.furnishing.furniture_url}>Furniture link</a>
-            {/* <img src={props.furnishing.furniture_img} alt="couch" srcset=""/> */}
+            <img src={props.furnishing.furniture_img} alt="couch" srcset=""/>
 
             {/* <a href={props.furniture_url}>Furniture</a> <br /> */}
             {/* <img src={props.furniture_img}/> */}

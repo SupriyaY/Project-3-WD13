@@ -80,11 +80,14 @@ top: 0;
 
 
 
+
+
+
 const EditUserForm = (props) => (
 
 <UserCard>
 
-    <EditForm>
+ <EditForm>
         <div><p>Edit Designer</p></div>
     <form onSubmit={props.handleSubmit}>
         <div>
@@ -120,7 +123,7 @@ const EditUserForm = (props) => (
     </form>
 <div><Button onClick={props.handleSubmit}>Edit</Button></div>
 
-    </EditForm>
+    </EditForm> 
     </UserCard>
 
 

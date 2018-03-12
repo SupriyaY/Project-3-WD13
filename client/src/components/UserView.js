@@ -75,11 +75,13 @@ class UserView extends Component {
     componentWillMount() {
         this.getUserInfo()
         this.getAllRooms()
+        
     }
 
     getUserInfo = async () => {
         try {
             const { userId } = this.props.match.params
+            console.log(userId)
             const res = await axios.get(`/api/users/${userId}`)
             console.log(res.data)
             this.setState({ user: res.data })
@@ -92,9 +94,9 @@ class UserView extends Component {
         try {
             const userId = this.props.match.params.userId
             const res = await axios.get(`/api/users/${userId}/rooms`)
-            console.log("LOGGING RES", res)
+           // console.log("LOGGING RES", res)
             const rooms = res.data.rooms
-            console.log(rooms)
+          //  console.log(rooms)
             this.setState({ rooms })
         } catch (err) {
             console.log(err)
@@ -107,9 +109,9 @@ class UserView extends Component {
             console.log("Getting all furnishings by userId and roomId", userId, roomId)
             const res = await axios.get(`/api/users/${userId}/rooms/${roomId}/furnishings`)
             const furnishings = res.data
-            console.log(res.data)
+            //console.log(res.data)
             this.setState({ furnishings: res.data })
-            console.log("Got furnishing and updated state", this.state.furnishings)
+            //console.log("Got furnishing and updated state", this.state.furnishings)
         } catch (err) {
             console.log(err)
         }
@@ -120,7 +122,7 @@ class UserView extends Component {
         try {
             const { userId } = this.props.match.params
             const res = await axios.delete(`/api/users/${userId}`)
-            console.log(res.data)
+           // console.log(res.data)
             this
                 .props
                 .getAllUsers()
@@ -131,7 +133,7 @@ class UserView extends Component {
     }
 
     handleSubmit = async (e) => {
-        console.log("Submitting User")
+        //console.log("Submitting User")
         e.preventDefault()
         const letsbuy = {
             _id: this.state.user._id,
@@ -143,13 +145,13 @@ class UserView extends Component {
 
         console.log("Submitting user:", letsbuy)
         const res = await axios.patch(`/api/users/${this.state.user._id}`, letsbuy)
-        console.log('Posted user', res.data)
+       // console.log('Posted user', res.data)
         this.setState({ redirect: false, newUser: res.data })
 
     }
 
     handleChange = (e) => {
-        console.log("Changing name to value:", e.target.name, e.target.value)
+        //console.log("Changing name to value:", e.target.name, e.target.value)
         const user = {
             ...this.state.user
         }
@@ -165,7 +167,7 @@ class UserView extends Component {
 
 
     render() {
-        console.log("Rendering UserView.User:", this.state.rooms)
+       // console.log("Rendering UserView.User:", this.state.rooms)
         if (this.state.redirect) {
             return (<Redirect to={`/users`} />)
         }
