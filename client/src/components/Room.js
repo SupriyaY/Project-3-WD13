@@ -56,6 +56,7 @@ addNewRoom = async () =>{
 
     componentWillMount() {
         this.getAllRooms()
+        this.addNewRoom()
 
     }
 

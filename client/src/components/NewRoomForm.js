@@ -52,8 +52,8 @@ top: 0;
     right: 0;
     bottom: 0;
     margin: auto;
-   min-width: 45vh;
-    min-height: 60vh;
+    width: 40vh;
+    height: 40vh;
     background-color: #fff;
     display: flex;
     justify-content: center;
@@ -68,7 +68,7 @@ top: 0;
 const NewRoomForm = (props) => {
 
     if (props.redirect) {
-        return (<Redirect to={`/users/${props.id}`} />)
+        return (<Redirect to={`/users/rooms/${props.id}`} />)
     }
 
     return (
@@ -78,7 +78,7 @@ const NewRoomForm = (props) => {
                 <form onSubmit={props.handleSubmit}>
                     <div>
                         <input
-                            value={props.room.room_name}
+                            value={props.room}
                             type="text"
                             placeholder="Name"
                             onChange={(e) => props.handleChange(e)}

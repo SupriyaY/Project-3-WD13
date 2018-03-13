@@ -69,7 +69,7 @@ top: 0;
 const NewUserForm = (props) => {
 
     if (props.redirect) {
-        return (<Redirect to={`/users/rooms/${props.id}`}/>)
+        return (<Redirect to={`/users/${props.id}`}/>)
     }
 
     return (
