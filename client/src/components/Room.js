@@ -56,7 +56,6 @@ addNewRoom = async () =>{
 
     componentWillMount() {
         this.getAllRooms()
-        this.addNewRoom()
 
     }
 
@@ -82,8 +81,8 @@ addNewRoom = async () =>{
 
                 <div>
                     <NewRoomForm
-                        users={this.state.users}
-                        user={this.state.newUser}
+                        rooms={this.state.rooms}
+                        room={this.state.newRoom}
                         id={this.state.newUserId}
                         redirect={this.state.redirect}
                         handleChange={this.handleChange}

@@ -52,7 +52,7 @@ top: 0;
     right: 0;
     bottom: 0;
     margin: auto;
-    width: 40vh;
+    width: 30vh;
     height: 40vh;
     background-color: #fff;
     display: flex;
@@ -63,6 +63,10 @@ top: 0;
     border-radius: 5px;
     z-index: 999;
 `;
+
+const handleSubmit = (event) => {
+    console.log("we're here");
+}
 
 
 const NewRoomForm = (props) => {
@@ -75,13 +79,12 @@ const NewRoomForm = (props) => {
         <UserCard>
             <UserAdd>
                 <h2>New Room</h2>
-                <form onSubmit={props.handleSubmit}>
+                <form onSubmit={handleSubmit}>
                     <div>
                         <input
                             value={props.room}
                             type="text"
                             placeholder="Name"
-                            onChange={(e) => props.handleChange(e)}
                             name="name"
                             required />
                     </div>
