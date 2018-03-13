@@ -16,7 +16,7 @@ router.get('/', (request, response) => {
 
 
 
-
+//
 router.post('/', (request, response) => {
     console.log('posting new user', request.body)
     const newUser = request.body
@@ -31,7 +31,7 @@ router.post('/', (request, response) => {
             response.json(user)
         })
         .catch((err) => {
-            console.error("SHIT", err)
+            console.error("View", err)
             response.send(err)
         })
 })

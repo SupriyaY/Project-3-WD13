@@ -75,7 +75,6 @@ class UserView extends Component {
     componentWillMount() {
         this.getUserInfo()
         this.getAllRooms()
-        
     }
 
     getUserInfo = async () => {
@@ -94,9 +93,9 @@ class UserView extends Component {
         try {
             const userId = this.props.match.params.userId
             const res = await axios.get(`/api/users/${userId}/rooms`)
-           // console.log("LOGGING RES", res)
+            // console.log("LOGGING RES", res)
             const rooms = res.data.rooms
-          //  console.log(rooms)
+            //  console.log(rooms)
             this.setState({ rooms })
         } catch (err) {
             console.log(err)
@@ -122,7 +121,7 @@ class UserView extends Component {
         try {
             const { userId } = this.props.match.params
             const res = await axios.delete(`/api/users/${userId}`)
-           // console.log(res.data)
+            // console.log(res.data)
             this
                 .props
                 .getAllUsers()
@@ -145,7 +144,7 @@ class UserView extends Component {
 
         console.log("Submitting user:", letsbuy)
         const res = await axios.patch(`/api/users/${this.state.user._id}`, letsbuy)
-       // console.log('Posted user', res.data)
+        // console.log('Posted user', res.data)
         this.setState({ redirect: false, newUser: res.data })
 
     }
@@ -167,7 +166,7 @@ class UserView extends Component {
 
 
     render() {
-       // console.log("Rendering UserView.User:", this.state.rooms)
+        // console.log("Rendering UserView.User:", this.state.rooms)
         if (this.state.redirect) {
             return (<Redirect to={`/users`} />)
         }
@@ -179,8 +178,8 @@ class UserView extends Component {
                     <a href='/'> HOME</a>
                     <a href='/users'>DESIGNERS</a>
                 </Header>
-<PageFormat>
-                
+                <PageFormat>
+
                     <Wrapper>
 
                         <div>
@@ -194,14 +193,14 @@ class UserView extends Component {
                         </div>
                     </Wrapper>
 
-                <div>
-                    <Board>
-                        <Link to={`/users/${userId}/rooms`}>Rooms Vision Board</Link>
-                    </Board>
+                    <div>
+                        <Board>
+                            <Link to={`/users/${userId}/rooms`}>Rooms Vision Board</Link>
+                        </Board>
                     </div>
-</PageFormat>
+                </PageFormat>
                 <Footer>
-                    </Footer>
+                </Footer>
             </div>
 
         )

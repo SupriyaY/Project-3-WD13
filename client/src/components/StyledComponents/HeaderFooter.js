@@ -56,14 +56,3 @@ height: 10vh;
 background: linear-gradient(to right, #C4E0E5, #4CA1AF);
 
 `;
-
-
-
-
-export default{
-HomeHeader,
-Header,
-Footer
-
-
-}
