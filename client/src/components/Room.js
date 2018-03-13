@@ -5,6 +5,7 @@ import axios from 'axios'
 import FurnishingPage from './FurnishingPage'
 import FurnishingList from './FurnishingList'
 import {IdeaBoard} from './StyledComponents/Containers'
+import NewRoomForm from './NewRoomForm'
 
 
 const RoomWrapper = styled.div `
@@ -37,6 +38,22 @@ getAllRooms = async (userId) => {
     }
 }
 
+addNewRoom = async () =>{
+
+    try {
+        const userId = this.props.match.params.userId
+        const res = await axios.get(`/api/users/${userId}/rooms`)
+        console.log("LOGGING RES", res.data)
+        const rooms = res.data
+        console.log(rooms)
+        this.setState({ rooms })
+    } catch (err) {
+        console.log(err)
+    }
+}
+
+
+
     componentWillMount() {
         this.getAllRooms()
 
@@ -61,6 +78,16 @@ getAllRooms = async (userId) => {
             <RoomWrapper>
                 {roomlist}
             </RoomWrapper>
+
+                <div>
+                    <NewRoomForm
+                        users={this.state.users}
+                        user={this.state.newUser}
+                        id={this.state.newUserId}
+                        redirect={this.state.redirect}
+                        handleChange={this.handleChange}
+                        handleSubmit={this.handleSubmit} />
+                </div>
             </IdeaBoard>
 
         )

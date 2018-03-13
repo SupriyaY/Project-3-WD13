@@ -65,7 +65,7 @@ top: 0;
 `;
 
 
-const NewUserForm = (props) => {
+const NewRoomForm = (props) => {
 
     if (props.redirect) {
         return (<Redirect to={`/users/${props.id}`} />)
@@ -78,7 +78,7 @@ const NewUserForm = (props) => {
                 <form onSubmit={props.handleSubmit}>
                     <div>
                         <input
-                            value={props.user.name}
+                            value={props.room.room_name}
                             type="text"
                             placeholder="Name"
                             onChange={(e) => props.handleChange(e)}
@@ -94,19 +94,6 @@ const NewUserForm = (props) => {
         </UserCard>
     )
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
