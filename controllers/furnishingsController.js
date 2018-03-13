@@ -28,18 +28,24 @@ router.post('/', (request, response) => {
     const userId = request.params.userId
     const roomId = request.params.roomId
 
-    const newActivity = request.body
+    const newFurnishing = request.body
 
     User.findById(userId)
         .then((user) => {
-            const city = user.cities.id(cityId)
-            city.activitiesToComplete.push(newActivity)
+            const city = user.rooms.id(cityId)
+            city.furnishingsToAdd.push(newFurnishing)
 
             return user.save()
         })
         .then(() => {
-            response.redirect(`/users/${userId}/cities/${cityId}`)
+            response.json(user.rooms.furnishingsToAdd)
         })
+
+
+        .catch((error) => {
+            console.log(error)
+        }
+        )
 })
 
 
