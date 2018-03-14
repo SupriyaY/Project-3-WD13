@@ -9,11 +9,43 @@ import NewRoomForm from './NewRoomForm'
 
 
 const RoomWrapper = styled.div `
+display: flex;
 align-items: center;
 justify-content: center;
 flex-direction: row;
+text-align: center;
 padding:20px;
 `;
+
+
+
+export const Header = styled.div`
+min-width: 100vw;
+min-height: 10vh;
+display: flex;
+justify-content: center;
+background: white;
+align-items:center;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+
+   a {
+     text-decoration: none;
+    font-size: 1.0em;
+    margin-right: 30px;
+    margin-top: 20px;
+    font-family: 'Raleway', sans-serif;
+text-align: center;
+        :hover {
+    color: #fff;
+}
+}
+
+
+`;
+
+
+
 
 
 class Room extends Component {
@@ -86,6 +118,12 @@ addNewRoom = async () =>{
 
         return (
             <IdeaBoard>
+                <Header>
+                    <a href='/'>HOME
+                    </a>
+                    <a href='/users'>DESIGNERS
+                    </a>
+                </Header>
             <RoomWrapper>
 
 

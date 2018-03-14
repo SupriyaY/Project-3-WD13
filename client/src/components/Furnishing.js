@@ -37,14 +37,21 @@ a{
 `;
 
 
+const Header = styled.div`
 
+
+
+
+
+
+`
 
 
 
 const Furnishing = (props) => {
 
     return (
-
+     
         <FurnWrapper>
 <UserCard>
             <a href={props.furnishing.furniture_url}>Furniture</a>
