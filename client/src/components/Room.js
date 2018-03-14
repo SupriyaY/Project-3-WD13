@@ -87,6 +87,8 @@ addNewRoom = async () =>{
         return (
             <IdeaBoard>
             <RoomWrapper>
+
+
                 {roomlist}
             </RoomWrapper>
 
