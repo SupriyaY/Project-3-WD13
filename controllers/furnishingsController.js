@@ -32,7 +32,7 @@ router.post('/', (request, response) => {
 
     User.findById(userId)
         .then((user) => {
-            const city = user.rooms.id(cityId)
+            const city = user.rooms.id(roomId)
             city.furnishingsToAdd.push(newFurnishing)
 
             return user.save()

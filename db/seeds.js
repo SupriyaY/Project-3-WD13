@@ -35,7 +35,7 @@ User
         const bedone = new Room({room_name: 'Bedroom'})
         const furnone = new Furnishing({
             furniture_url: "https://www.wayfair.com/",
-            furniture_img: "https://i.imgur.com/5hq2Mo2.png?1",
+            furniture_img: "",
             light_url: "https://www.wayfair.com/",
             light_img: "",
             rug_url: "https://www.wayfair.com/",
@@ -53,7 +53,7 @@ User
             light_url: "https://www.wayfair.com/",
             light_img: "",
             rug_url: "https://www.wayfair.com/",
-            rug_img: ""
+            rug_img: "https://i.imgur.com/t0AA3GA.png?1"
         })
 
         bathone
@@ -63,11 +63,11 @@ User
         const livingone = new Room({room_name: 'Living Room'})
         const furnthree = new Furnishing({
             furniture_url: "https://www.wayfair.com/",
-            furniture_img: "",
+            furniture_img: "https://i.imgur.com/5hq2Mo2.png?1",
             light_url: "https://www.wayfair.com/",
             light_img: "",
             rug_url: "https://www.wayfair.com/",
-            rug_img: ""
+            rug_img: "https://i.imgur.com/71NadJP.jpg?1"
         })
 
         livingone
@@ -77,7 +77,7 @@ User
         const kitchenone = new Room({room_name: 'Kitchen'})
         const furnfour = new Furnishing({
             furniture_url: "https://www.wayfair.com/",
-            furniture_img: "",
+            furniture_img: "https://i.imgur.com/pLU1ST9.jpg?1",
             light_url: "https://www.wayfair.com/",
             light_img: "",
             rug_url: "https://www.wayfair.com/",
@@ -101,7 +101,7 @@ User
         const bedtwo = new Room({room_name: 'Bedroom'})
         const furnfive = new Furnishing({
             furniture_url: "https://www.wayfair.com/",
-            furniture_img: "https://i.imgur.com/5hq2Mo2.png?1",
+            furniture_img: "",
             light_url: "https://www.wayfair.com/",
             light_img: "",
             rug_url: "https://www.wayfair.com/",
@@ -119,7 +119,7 @@ User
             light_url: "https://www.wayfair.com/",
             light_img: "",
             rug_url: "https://www.wayfair.com/",
-            rug_img: ""
+            rug_img: "https://i.imgur.com/t0AA3GA.png?1"
         })
 
         bathtwo
@@ -133,7 +133,7 @@ User
             light_url: "https://www.wayfair.com/",
             light_img: "",
             rug_url: "https://www.wayfair.com/",
-            rug_img: ""
+            rug_img: "https://i.imgur.com/t0AA3GA.png?1"
         })
 
         livingtwo
@@ -143,7 +143,7 @@ User
         const kitchentwo = new Room({room_name: 'Kitchen'})
         const furneight = new Furnishing({
             furniture_url: "https://www.wayfair.com/",
-            furniture_img: "",
+            furniture_img: "https://i.imgur.com/5hq2Mo2.png?1",
             light_url: "https://www.wayfair.com/",
             light_img: "",
             rug_url: "https://www.overstock.com/",
@@ -171,7 +171,7 @@ User
         const bedthree = new Room({room_name: 'Bedroom'})
         const furnnine = new Furnishing({
             furniture_url: "https://www.wayfair.com/",
-            furniture_img: "https://i.imgur.com/5hq2Mo2.png?1",
+            furniture_img: "",
             light_url: "https://www.wayfair.com/",
             light_img: "",
             rug_url: "https://www.wayfair.com/",
@@ -189,7 +189,7 @@ User
             light_url: "https://www.wayfair.com/",
             light_img: "",
             rug_url: "https://www.wayfair.com/",
-            rug_img: ""
+            rug_img: "https://i.imgur.com/t0AA3GA.png?1"
         })
 
         baththree
@@ -199,7 +199,7 @@ User
         const livingthree = new Room({room_name: 'Living Room'})
         const furneleven = new Furnishing({
             furniture_url: "https://www.wayfair.com/",
-            furniture_img: "",
+            furniture_img: "https://i.imgur.com/5hq2Mo2.png?1",
             light_url: "https://www.wayfair.com/",
             light_img: "",
             rug_url: "https://www.wayfair.com/",
@@ -213,7 +213,7 @@ User
         const kitchenthree = new Room({room_name: 'Kitchen'})
         const furntwelve = new Furnishing({
             furniture_url: "https://www.wayfair.com/",
-            furniture_img: "",
+            furniture_img: "https://i.imgur.com/pLU1ST9.jpg?1",
             light_url: "https://www.wayfair.com/",
             light_img: "",
             rug_url: "https://www.wayfair.com/",
@@ -237,11 +237,11 @@ User
         const bedfour = new Room({room_name: 'Bedroom'})
         const furnthirteen = new Furnishing({
             furniture_url: "https://www.wayfair.com/",
-            furniture_img: "https://i.imgur.com/5hq2Mo2.png?1",
+            furniture_img: "",
             light_url: "https://www.wayfair.com/",
             light_img: "",
             rug_url: "https://www.wayfair.com/",
-            rug_img: ""
+            rug_img: "https://i.imgur.com/71NadJP.jpg?1"
         })
 
         bedfour
@@ -269,7 +269,7 @@ User
             light_url: "https://www.wayfair.com/",
             light_img: "",
             rug_url: "https://www.wayfair.com/",
-            rug_img: ""
+            rug_img: "https://i.imgur.com/t0AA3GA.png?1"
         })
 
         livingfour
@@ -279,7 +279,7 @@ User
         const kitchenfour = new Room({room_name: 'Kitchen'})
         const furnsixteen = new Furnishing({
             furniture_url: "https://www.wayfair.com/",
-            furniture_img: "",
+            furniture_img: "https://i.imgur.com/pLU1ST9.jpg?1",
             light_url: "https://www.wayfair.com/",
             light_img: "",
             rug_url: "https://www.wayfair.com/",
