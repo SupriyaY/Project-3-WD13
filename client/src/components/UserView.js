@@ -171,7 +171,6 @@ class UserView extends Component {
             return (<Redirect to={`/users`} />)
         }
         const { userId } = this.props.match.params
-
         return (
             <div>
                 <Header>

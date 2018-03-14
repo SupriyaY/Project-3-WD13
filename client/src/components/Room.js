@@ -42,7 +42,7 @@ addNewRoom = async () =>{
 
     try {
         const userId = this.props.match.params.userId
-        const res = await axios.get(`/api/users/${userId}/rooms`)
+        const res = await axios.post(`/api/users/${userId}/rooms`)
         console.log("LOGGING RES", res.data)
         const rooms = res.data
         console.log(rooms)
@@ -51,6 +51,17 @@ addNewRoom = async () =>{
         console.log(err)
     }
 }
+
+
+// handleSubmit = async (e) => {
+//         //console.log("Submitting User")
+//         e.preventDefault()
+//         const letsbuy = {
+//             _id: this.state.room._id,
+//             room_name: this.state.room.room_name
+//         }
+//     }
+
 
 
 

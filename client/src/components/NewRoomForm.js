@@ -64,8 +64,17 @@ top: 0;
     z-index: 999;
 `;
 
-const handleSubmit = (event) => {
-    console.log("we're here");
+
+
+
+const handleSubmit = async (e) => {
+    //console.log("Submitting User")
+    e.preventDefault()
+    console.log(this.rooms)
+    const letsbuy = {
+        room_name: this.value,
+        _id: this.state.room._id,
+    }
 }
 
 
@@ -79,10 +88,10 @@ const NewRoomForm = (props) => {
         <UserCard>
             <UserAdd>
                 <h2>New Room</h2>
+                
                 <form onSubmit={handleSubmit}>
                     <div>
-                        <input
-                            value={props.room}
+                        <input 
                             type="text"
                             placeholder="Name"
                             name="name"
