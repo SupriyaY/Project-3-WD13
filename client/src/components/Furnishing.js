@@ -17,7 +17,7 @@ top: 0;
     right: 0;
     bottom: 0;
     margin: 10px;
-    width: 30vh;
+    width: 20vh;
     height: 20vh;
     background-color: yellow;
     display: flex;
