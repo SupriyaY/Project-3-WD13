@@ -59,7 +59,8 @@ app.use('/api/users/:userId/rooms', roomsController)
 const furnishingsController = require('./controllers/furnishingsController')
 app.use('/api/users/:userId/rooms/:roomId/furnishings', furnishingsController)
 
-
+const googleController = require('./controllers/googleController')
+app.use('/api/google', googleController)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

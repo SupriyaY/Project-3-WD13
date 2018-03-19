@@ -50,7 +50,8 @@ class Room extends Component {
     state = {
         user: {},
         rooms: [],
-        redirect: false
+        newRoom: [],
+                    redirect: false
     }
 
 
