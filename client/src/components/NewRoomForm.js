@@ -88,7 +88,7 @@ const NewRoomForm = (props) => {
         <UserCard>
             <UserAdd>
                 <h2>New Room</h2>
-                
+                <h4>(Coming soon!)</h4>
                 <form onSubmit={handleSubmit}>
                     <div>
                         <input 
