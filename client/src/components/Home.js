@@ -39,7 +39,7 @@ class Home extends Component {
         <HomeContainer>
             </HomeContainer> 
             <App>
-            <h1>Welcome to RoomStyle. Select the Room Designers above to begin your home decor journey! Use RoomStyle to gather and share all of your home decor idea with other designers.</h1>
+            <h1>Welcome to RoomStyle. Select the Room Designers above to begin your home decor journey! Use RoomStyle to gather and share all of your home decor idea with other designers. Some features coming soon: in-application google search and add a room as a new designer!</h1>
             </App>
                 <Footer>  
             </Footer>         
